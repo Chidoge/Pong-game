@@ -2,6 +2,7 @@
 green_out <= ball:inst.Green
 bt1 => ball:inst.PB1
 bt2 => ball:inst.PB2
+SW[0] => ball:inst.SW0
 clk => clk_divider:inst4.clk
 blue_out <= ball:inst.Blue
 red_out <= ball:inst.Red
@@ -27,7 +28,8 @@ seg1[6] <= seven_seg:inst2.ledsegment[6]
 
 |305game|ball:inst
 PB1 => ~NO_FANOUT~
-PB2 => ~NO_FANOUT~
+PB2 => Ball_Color2.IN1
+SW0 => Ball_Color.IN1
 Clock => vga_sync:SYNC.clock_25Mhz
 Clock => char_rom:CHAR.clock
 Clock => MOUSE:New_mouse.clock_25Mhz

@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(EP3C16F484) Path("C:/Users/Lincoln/Downloads/305Project/output_files/") File("305game.sof") MfrSpec(OpMask(1));
+		Device PartName(EP3C16F484) Path("C:/Users/Henry/Desktop/305Project/305Project/output_files/") File("305game.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 

@@ -46,17 +46,16 @@ set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
-set_global_assignment -name NOMINAL_CORE_SUPPLY_VOLTAGE 1.2V
 set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (VHDL)"
 set_global_assignment -name EDA_OUTPUT_DATA_FORMAT VHDL -section_id eda_simulation
 set_location_assignment PIN_K18 -to blue_out
 set_location_assignment PIN_G3 -to bt1
 set_location_assignment PIN_H2 -to bt2
-set_location_assignment PIN_G21 -to clk
+set_location_assignment PIN_B12 -to clk
 set_location_assignment PIN_J21 -to green_out
 set_location_assignment PIN_L21 -to horiz_sync_out
-set_location_assignment PIN_P22 -to mouse_clk
-set_location_assignment PIN_P21 -to mouse_data
+set_location_assignment PIN_P21 -to mouse_clk
+set_location_assignment PIN_P22 -to mouse_data
 set_location_assignment PIN_H21 -to red_out
 set_location_assignment PIN_D13 -to seg0_dec
 set_location_assignment PIN_B15 -to seg1_dec
@@ -81,11 +80,12 @@ set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "2.5 V"
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_location_assignment PIN_J6 -to SW[0]
 set_global_assignment -name VHDL_FILE mouse.VHD
+set_global_assignment -name VHDL_FILE vga_sync.vhd
 set_global_assignment -name VHDL_FILE seven_seg.vhd
 set_global_assignment -name BDF_FILE 305game.bdf
 set_global_assignment -name VHDL_FILE clk_divider.vhd
-set_global_assignment -name VHDL_FILE vga_sync.vhd
 set_global_assignment -name VHDL_FILE char_rom.vhd
 set_global_assignment -name VHDL_FILE ball.vhd
 set_global_assignment -name CDF_FILE output_files/Chain4.cdf
