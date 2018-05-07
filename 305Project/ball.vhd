@@ -61,11 +61,9 @@ ENTITY ball IS
 Generic(ADDR_WIDTH: integer := 12; DATA_WIDTH: integer := 1);
 
    PORT(SIGNAL PB1, PB2, SW0, Clock 			: IN std_logic;
+		  SIGNAL Ball_X						: IN std_logic_vector(9 DOWNTO 0);
         SIGNAL Red,Green,Blue 			: OUT std_logic;
-        SIGNAL Horiz_sync,Vert_sync		: OUT std_logic;
-		  SIGNAL mouse_col 					: OUT std_logic_vector(9 downto 0);
-		  signal mouse_data_out				: OUT std_logic;
-		  signal mouse_clk_out				: OUT std_logic
+        SIGNAL Horiz_sync,Vert_sync		: OUT std_logic
 		  );		
 END ball;
 
@@ -91,8 +89,6 @@ signal Platform_On : std_logic;
 
 -- signals for mouse
 signal mouse_row, mouse_column : std_logic_vector(9 downto 0);
-signal mouse_reset,mouse_clock_sig,mouse_data_sig,left_button_sig,right_button_sig : std_logic;
-
 
 BEGIN           
    SYNC: vga_sync
@@ -107,20 +103,13 @@ BEGIN
 
 	P_form : platform
 		PORT MAP(X,Platform_X,Platform_Y,Platform_Width,Platform_Height);
-	
-	New_mouse : Mouse 
-		PORT MAP (clock,mouse_reset,mouse_data_sig,mouse_clock_sig,left_button_sig,right_button_sig,mouse_row,mouse_column);
-		
+
 		
 Size <= CONV_STD_LOGIC_VECTOR(8,10);
 
-mouse_data_out <= mouse_data_sig;
-mouse_clk_out <= mouse_clock_sig;
 
+X <= '0' & Ball_X;
 
-X <= CONV_STD_LOGIC_VECTOR(500,11);
-
-mouse_col <= mouse_column;
 
 		-- need internal copy of vert_sync to read
 vert_sync <= vert_sync_int;
@@ -223,6 +212,7 @@ end process Draw_Score_Text;
 Move_Ball: process
 variable Ball_Y_motion 						: std_logic_vector(9 DOWNTO 0);
 variable Ball_X_motion 						: std_logic_vector(9 DOWNTO 0);
+variable reset_ball							: std_logic := '0';
 BEGIN
 			-- Move ball once every vertical sync
 	WAIT UNTIL vert_sync_int'event and vert_sync_int = '1';
@@ -243,12 +233,18 @@ BEGIN
 			IF ('0' & Ball_Y_Pos) >= CONV_STD_LOGIC_VECTOR(440,11) - Size THEN
 				IF ("00" & Ball_X_POS) >= (Platform_X - Size) AND ("00" & Ball_X_POS) <= (Platform_X + Platform_Width)
 				THEN
-					Ball_Y_motion := -.Ball_Y_Pos;
+					reset_ball := '1';
 				END IF;
 			END If;	
+			
 			-- Compute next ball Y position
+			if (reset_ball = '0') then
 				Ball_Y_pos <= Ball_Y_pos + Ball_Y_motion;
 				Ball_X_pos <= Ball_X_Pos + Ball_X_motion;
+			else 
+				Ball_Y_pos <= "0000000000";
+				reset_ball := '0';
+			end if;
 END process Move_Ball;
 
 END behavior;

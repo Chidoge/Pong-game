@@ -4,12 +4,12 @@ bt1 => ball:inst.PB1
 bt2 => ball:inst.PB2
 SW[0] => ball:inst.SW0
 clk => clk_divider:inst4.clk
+mouse_data <> MOUSE:inst5.mouse_data
+mouse_clk <> MOUSE:inst5.mouse_clk
 blue_out <= ball:inst.Blue
 red_out <= ball:inst.Red
 vert_sync_out <= ball:inst.Vert_sync
 horiz_sync_out <= ball:inst.Horiz_sync
-mouse_data <= ball:inst.mouse_data_out
-mouse_clk <= ball:inst.mouse_clk_out
 seg0[0] <= seven_seg:inst3.ledsegment[0]
 seg0[1] <= seven_seg:inst3.ledsegment[1]
 seg0[2] <= seven_seg:inst3.ledsegment[2]
@@ -32,24 +32,21 @@ PB2 => Ball_Color2.IN1
 SW0 => Ball_Color.IN1
 Clock => vga_sync:SYNC.clock_25Mhz
 Clock => char_rom:CHAR.clock
-Clock => MOUSE:New_mouse.clock_25Mhz
+Ball_X[0] => platform:P_form.X[0]
+Ball_X[1] => platform:P_form.X[1]
+Ball_X[2] => platform:P_form.X[2]
+Ball_X[3] => platform:P_form.X[3]
+Ball_X[4] => platform:P_form.X[4]
+Ball_X[5] => platform:P_form.X[5]
+Ball_X[6] => platform:P_form.X[6]
+Ball_X[7] => platform:P_form.X[7]
+Ball_X[8] => platform:P_form.X[8]
+Ball_X[9] => platform:P_form.X[9]
 Red <= vga_sync:SYNC.red_out
 Green <= vga_sync:SYNC.green_out
 Blue <= vga_sync:SYNC.blue_out
 Horiz_sync <= vga_sync:SYNC.horiz_sync_out
 Vert_sync <= vga_sync:SYNC.vert_sync_out
-mouse_col[0] <= MOUSE:New_mouse.mouse_cursor_column[0]
-mouse_col[1] <= MOUSE:New_mouse.mouse_cursor_column[1]
-mouse_col[2] <= MOUSE:New_mouse.mouse_cursor_column[2]
-mouse_col[3] <= MOUSE:New_mouse.mouse_cursor_column[3]
-mouse_col[4] <= MOUSE:New_mouse.mouse_cursor_column[4]
-mouse_col[5] <= MOUSE:New_mouse.mouse_cursor_column[5]
-mouse_col[6] <= MOUSE:New_mouse.mouse_cursor_column[6]
-mouse_col[7] <= MOUSE:New_mouse.mouse_cursor_column[7]
-mouse_col[8] <= MOUSE:New_mouse.mouse_cursor_column[8]
-mouse_col[9] <= MOUSE:New_mouse.mouse_cursor_column[9]
-mouse_data_out <= mouse_data_out.DB_MAX_OUTPUT_PORT_TYPE
-mouse_clk_out <= mouse_clk_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |305game|ball:inst|VGA_SYNC:SYNC
@@ -347,7 +344,44 @@ Platform_Height[8] <= <GND>
 Platform_Height[9] <= <GND>
 
 
-|305game|ball:inst|MOUSE:New_mouse
+|305game|clk_divider:inst4
+clk => clk_out_hz_temp.CLK
+clk => clk_out_hz_count[0].CLK
+clk => clk_out_hz_count[1].CLK
+clk => clk_out_hz_count[2].CLK
+clk => clk_out_hz_count[3].CLK
+clk => clk_out_hz_count[4].CLK
+clk => clk_out_hz_count[5].CLK
+clk => clk_out_hz_count[6].CLK
+clk => clk_out_hz_count[7].CLK
+clk => clk_out_hz_count[8].CLK
+clk => clk_out_hz_count[9].CLK
+clk => clk_out_hz_count[10].CLK
+clk => clk_out_hz_count[11].CLK
+clk => clk_out_hz_count[12].CLK
+clk => clk_out_hz_count[13].CLK
+clk => clk_out_hz_count[14].CLK
+clk => clk_out_hz_count[15].CLK
+clk => clk_out_hz_count[16].CLK
+clk => clk_out_hz_count[17].CLK
+clk => clk_out_hz_count[18].CLK
+clk => clk_out_hz_count[19].CLK
+clk => clk_out_hz_count[20].CLK
+clk => clk_out_hz_count[21].CLK
+clk => clk_out_hz_count[22].CLK
+clk => clk_out_hz_count[23].CLK
+clk => clk_out_hz_count[24].CLK
+clk => clk_out_hz_count[25].CLK
+clk => clk_out_hz_count[26].CLK
+clk => clk_out_hz_count[27].CLK
+clk => clk_out_hz_count[28].CLK
+clk => clk_out_hz_count[29].CLK
+clk => clk_out_hz_count[30].CLK
+clk => clk_out_hz_count[31].CLK
+clk_out_hz <= clk_out_hz_temp.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|305game|MOUSE:inst5
 clock_25Mhz => MOUSE_CLK_FILTER.CLK
 clock_25Mhz => filter[0].CLK
 clock_25Mhz => filter[1].CLK
@@ -500,43 +534,6 @@ mouse_cursor_column[6] <= cursor_column[6].DB_MAX_OUTPUT_PORT_TYPE
 mouse_cursor_column[7] <= cursor_column[7].DB_MAX_OUTPUT_PORT_TYPE
 mouse_cursor_column[8] <= cursor_column[8].DB_MAX_OUTPUT_PORT_TYPE
 mouse_cursor_column[9] <= cursor_column[9].DB_MAX_OUTPUT_PORT_TYPE
-
-
-|305game|clk_divider:inst4
-clk => clk_out_hz_temp.CLK
-clk => clk_out_hz_count[0].CLK
-clk => clk_out_hz_count[1].CLK
-clk => clk_out_hz_count[2].CLK
-clk => clk_out_hz_count[3].CLK
-clk => clk_out_hz_count[4].CLK
-clk => clk_out_hz_count[5].CLK
-clk => clk_out_hz_count[6].CLK
-clk => clk_out_hz_count[7].CLK
-clk => clk_out_hz_count[8].CLK
-clk => clk_out_hz_count[9].CLK
-clk => clk_out_hz_count[10].CLK
-clk => clk_out_hz_count[11].CLK
-clk => clk_out_hz_count[12].CLK
-clk => clk_out_hz_count[13].CLK
-clk => clk_out_hz_count[14].CLK
-clk => clk_out_hz_count[15].CLK
-clk => clk_out_hz_count[16].CLK
-clk => clk_out_hz_count[17].CLK
-clk => clk_out_hz_count[18].CLK
-clk => clk_out_hz_count[19].CLK
-clk => clk_out_hz_count[20].CLK
-clk => clk_out_hz_count[21].CLK
-clk => clk_out_hz_count[22].CLK
-clk => clk_out_hz_count[23].CLK
-clk => clk_out_hz_count[24].CLK
-clk => clk_out_hz_count[25].CLK
-clk => clk_out_hz_count[26].CLK
-clk => clk_out_hz_count[27].CLK
-clk => clk_out_hz_count[28].CLK
-clk => clk_out_hz_count[29].CLK
-clk => clk_out_hz_count[30].CLK
-clk => clk_out_hz_count[31].CLK
-clk_out_hz <= clk_out_hz_temp.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |305game|seven_seg:inst3
