@@ -54,8 +54,8 @@ set_location_assignment PIN_H2 -to bt2
 set_location_assignment PIN_B12 -to clk
 set_location_assignment PIN_J21 -to green_out
 set_location_assignment PIN_L21 -to horiz_sync_out
-set_location_assignment PIN_P21 -to mouse_clk
-set_location_assignment PIN_P22 -to mouse_data
+set_location_assignment PIN_P22 -to mouse_clk
+set_location_assignment PIN_P21 -to mouse_data
 set_location_assignment PIN_H21 -to red_out
 set_location_assignment PIN_D13 -to seg0_dec
 set_location_assignment PIN_B15 -to seg1_dec

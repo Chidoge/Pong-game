@@ -13,7 +13,9 @@ PACKAGE de0core IS
 				
          	red_out, green_out, blue_out	: OUT 	STD_LOGIC;
 			horiz_sync_out, vert_sync_out	: OUT 	STD_LOGIC;
-			pixel_row, pixel_column			: OUT STD_LOGIC_VECTOR(9 DOWNTO 0));
+			pixel_row							: OUT STD_LOGIC_VECTOR(9 DOWNTO 0);
+			pixel_column						: OUT STD_LOGIC_VECTOR(10 DOWNTO 0)
+			);
 	END COMPONENT;
 	
 	COMPONENT char_rom IS
@@ -28,8 +30,8 @@ PACKAGE de0core IS
 	
 	COMPONENT platform IS
 	 PORT(
-			signal X : in std_logic_vector(9 downto 0);
-			SIGNAL Platform_X : out std_logic_vector(9 downto 0);
+			signal X : in std_logic_vector(10 downto 0);
+			SIGNAL Platform_X : out std_logic_vector(10 downto 0);
 			SIGNAL Platform_Y : out std_logic_vector(9 downto 0);
 			SIGNAL Platform_Width : out std_logic_vector(9 downto 0);
 			SIGNAL Platform_Height : out std_logic_vector(9 downto 0)
@@ -73,16 +75,18 @@ architecture behavior of ball is
 SIGNAL Red_Data, Green_Data, Blue_Data, vert_sync_int,
 		reset, Ball_on, Ball_Color, Ball_Color2, Direction			: std_logic;
 SIGNAL Size	  									: std_logic_vector(9 DOWNTO 0);  
-SIGNAL Ball_Y_motion 						: std_logic_vector(9 DOWNTO 0);
-signal Ball_X_motion 						: std_logic_vector(9 DOWNTO 0);
-SIGNAL Ball_Y_pos, Ball_X_pos				: std_logic_vector(9 DOWNTO 0);
-SIGNAL pixel_row, pixel_column				: std_logic_vector(9 DOWNTO 0);
+
+SIGNAL Ball_Y_pos				 				: std_logic_vector(9 DOWNTO 0);
+SIGNAL Ball_X_pos								: std_logic_vector(10 DOWNTO 0);
+SIGNAL pixel_row								: std_logic_vector(9 DOWNTO 0);
+SIGNAL pixel_column							: std_logic_vector(10 downto 0);
 
 SIGNAL char_adr : std_logic_vector(5 downto 0);
 SIGNAL rom_mux_output : std_logic;
 
 --signals for platform
-signal X,Platform_X,Platform_Y,Platform_Height,Platform_Width : std_logic_vector(9 downto 0);
+signal Platform_Y,Platform_Height,Platform_Width : std_logic_vector(9 downto 0);
+signal X,Platform_X : std_logic_vector(10 downto 0);
 signal Platform_On : std_logic;
 
 -- signals for mouse
@@ -114,7 +118,7 @@ mouse_data_out <= mouse_data_sig;
 mouse_clk_out <= mouse_clock_sig;
 
 
-X <= mouse_column;--CONV_STD_LOGIC_VECTOR(500,10);
+X <= CONV_STD_LOGIC_VECTOR(500,11);
 
 mouse_col <= mouse_column;
 
@@ -133,9 +137,9 @@ Blue_Data <= NOT (Platform_On OR Ball_Color2);--'1' when ((rom_mux_output OR Pla
 RGB_Display: Process (Ball_X_pos, Ball_Y_pos, pixel_column, pixel_row, Size)
 BEGIN
 			-- Set Ball_on ='1' to display ball
- IF (('0' & Ball_X_pos <= pixel_column + Size) AND
+ IF (("00" & Ball_X_pos <= pixel_column + Size) AND
  			-- compare positive numbers only
- 	(Ball_X_pos + Size >= '0' & pixel_column)) OR
+ 	(Ball_X_pos + Size >= "00" & pixel_column)) AND
  	(('0' & Ball_Y_pos <= pixel_row + Size) AND
  	(Ball_Y_pos + Size >= '0' & pixel_row )) THEN
  		Ball_on <= '1';
@@ -194,41 +198,19 @@ BEGIN
 	if (pixel_row>=CONV_STD_LOGIC_VECTOR(0,10) AND pixel_row <= CONV_STD_LOGIC_VECTOR(15,10)) then
 		-- S
 		if (pixel_column >= CONV_STD_LOGIC_VECTOR(1,10) AND pixel_column <= CONV_STD_LOGIC_VECTOR(16,10)) then
-			char_adr <= "010011";
+			char_adr <= CONV_STD_LOGIC_VECTOR(19,6);
 		-- C
 		elsif (pixel_column >= CONV_STD_LOGIC_VECTOR(17,10) AND pixel_column <= CONV_STD_LOGIC_VECTOR(32,10)) then
-			char_adr <= "000011";
+			char_adr <= CONV_STD_LOGIC_VECTOR(3,6);
 		-- O
 		elsif (pixel_column >= CONV_STD_LOGIC_VECTOR(33,10) AND pixel_column <= CONV_STD_LOGIC_VECTOR(48,10)) then
-			char_adr <= "001111";
+			char_adr <= CONV_STD_LOGIC_VECTOR(15,6);
 		-- R
 		elsif (pixel_column >= CONV_STD_LOGIC_VECTOR(49,10) AND pixel_column <= CONV_STD_LOGIC_VECTOR(64,10)) then
-			char_adr <= "010010";
+			char_adr <= CONV_STD_LOGIC_VECTOR(18,6);
 		-- E
 		elsif (pixel_column >= CONV_STD_LOGIC_VECTOR(65,10) AND pixel_column <= CONV_STD_LOGIC_VECTOR(80,10)) then
-			char_adr <= "000101";
-		elsif (pixel_column >= CONV_STD_LOGIC_VECTOR(449,10) AND pixel_column <= CONV_STD_LOGIC_VECTOR(464,10)) then
-			char_adr <= "000101";
-		elsif (pixel_column >= CONV_STD_LOGIC_VECTOR(465,10) AND pixel_column <= CONV_STD_LOGIC_VECTOR(480,10)) then
-			char_adr <= "000101";
-		elsif (pixel_column >= CONV_STD_LOGIC_VECTOR(481,10) AND pixel_column <= CONV_STD_LOGIC_VECTOR(496,10)) then
-			char_adr <= "000101";
-		elsif (pixel_column >= 497) then --Can't use the second condition or it doesn't work
-			char_adr <= "000101";
-		elsif (pixel_column >= CONV_STD_LOGIC_VECTOR(513,10) AND pixel_column <= CONV_STD_LOGIC_VECTOR(528,10)) then
-			char_adr <= "000101";
-		elsif (pixel_column >= CONV_STD_LOGIC_VECTOR(529,10) AND pixel_column <= CONV_STD_LOGIC_VECTOR(544,10)) then
-			char_adr <= "000101";
-		elsif (pixel_column >= CONV_STD_LOGIC_VECTOR(545,10) AND pixel_column <= CONV_STD_LOGIC_VECTOR(560,10)) then
-			char_adr <= "000101";
-		elsif (pixel_column >= CONV_STD_LOGIC_VECTOR(561,10) AND pixel_column <= CONV_STD_LOGIC_VECTOR(576,10)) then
-			char_adr <= "000101";
-		elsif (pixel_column >= CONV_STD_LOGIC_VECTOR(577,10) AND pixel_column <= CONV_STD_LOGIC_VECTOR(592,10)) then
-			char_adr <= "000101";
-		elsif (pixel_column >= CONV_STD_LOGIC_VECTOR(593,10) AND pixel_column <= CONV_STD_LOGIC_VECTOR(608,10)) then
-			char_adr <= "000101";
-		elsif (pixel_column >= CONV_STD_LOGIC_VECTOR(609,10) AND pixel_column <= CONV_STD_LOGIC_VECTOR(624,10)) then
-			char_adr <= "000101";
+			char_adr <= CONV_STD_LOGIC_VECTOR(5,6);
 		else 
 			char_adr <= CONV_STD_LOGIC_VECTOR(32,6);
 		end if;
@@ -239,23 +221,31 @@ end process Draw_Score_Text;
 
 
 Move_Ball: process
+variable Ball_Y_motion 						: std_logic_vector(9 DOWNTO 0);
+variable Ball_X_motion 						: std_logic_vector(9 DOWNTO 0);
 BEGIN
 			-- Move ball once every vertical sync
 	WAIT UNTIL vert_sync_int'event and vert_sync_int = '1';
 			-- Bounce off top or bottom of screen
-			IF ('0' & Ball_Y_pos) >= CONV_STD_LOGIC_VECTOR(480,10) - Size THEN 
-				Ball_Y_motion <= - CONV_STD_LOGIC_VECTOR(1,10);
+			IF ('0' & Ball_Y_pos) >= CONV_STD_LOGIC_VECTOR(480,11) - Size THEN 
+				Ball_Y_motion := - CONV_STD_LOGIC_VECTOR(4,10);
 			ELSIF Ball_Y_pos <= Size THEN
-				Ball_Y_motion <= CONV_STD_LOGIC_VECTOR(1,10);
+				Ball_Y_motion := CONV_STD_LOGIC_VECTOR(4,10);
 			END IF;
 			
 			
-			IF ('0' & Ball_X_Pos) >= CONV_STD_LOGIC_VECTOR(640,10) - Size THEN 
-				Ball_X_motion <= - CONV_STD_LOGIC_VECTOR(1,10);
+			IF ("00" & Ball_X_Pos) >= CONV_STD_LOGIC_VECTOR(640,11) - Size THEN 
+				Ball_X_motion := - CONV_STD_LOGIC_VECTOR(4,10);
 			ELSIF Ball_X_Pos <= Size THEN
-				Ball_X_motion <= CONV_STD_LOGIC_VECTOR(1,10);
+				Ball_X_motion := CONV_STD_LOGIC_VECTOR(4,10);
 			END IF;	
 			
+			IF ('0' & Ball_Y_Pos) >= CONV_STD_LOGIC_VECTOR(440,11) - Size THEN
+				IF ("00" & Ball_X_POS) >= (Platform_X - Size) AND ("00" & Ball_X_POS) <= (Platform_X + Platform_Width)
+				THEN
+					Ball_Y_motion := -.Ball_Y_Pos;
+				END IF;
+			END If;	
 			-- Compute next ball Y position
 				Ball_Y_pos <= Ball_Y_pos + Ball_Y_motion;
 				Ball_X_pos <= Ball_X_Pos + Ball_X_motion;

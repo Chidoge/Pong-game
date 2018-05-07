@@ -79,6 +79,7 @@ clock_25Mhz => pixel_column[6]~reg0.CLK
 clock_25Mhz => pixel_column[7]~reg0.CLK
 clock_25Mhz => pixel_column[8]~reg0.CLK
 clock_25Mhz => pixel_column[9]~reg0.CLK
+clock_25Mhz => pixel_column[10]~reg0.CLK
 clock_25Mhz => video_on_h.CLK
 clock_25Mhz => vert_sync.CLK
 clock_25Mhz => v_count[0].CLK
@@ -130,6 +131,7 @@ pixel_column[6] <= pixel_column[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 pixel_column[7] <= pixel_column[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 pixel_column[8] <= pixel_column[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 pixel_column[9] <= pixel_column[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+pixel_column[10] <= pixel_column[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |305game|ball:inst|char_rom:CHAR
@@ -301,6 +303,7 @@ X[6] => Platform_X[6].DATAIN
 X[7] => Platform_X[7].DATAIN
 X[8] => Platform_X[8].DATAIN
 X[9] => Platform_X[9].DATAIN
+X[10] => Platform_X[10].DATAIN
 Platform_X[0] <= X[0].DB_MAX_OUTPUT_PORT_TYPE
 Platform_X[1] <= X[1].DB_MAX_OUTPUT_PORT_TYPE
 Platform_X[2] <= X[2].DB_MAX_OUTPUT_PORT_TYPE
@@ -311,6 +314,7 @@ Platform_X[6] <= X[6].DB_MAX_OUTPUT_PORT_TYPE
 Platform_X[7] <= X[7].DB_MAX_OUTPUT_PORT_TYPE
 Platform_X[8] <= X[8].DB_MAX_OUTPUT_PORT_TYPE
 Platform_X[9] <= X[9].DB_MAX_OUTPUT_PORT_TYPE
+Platform_X[10] <= X[10].DB_MAX_OUTPUT_PORT_TYPE
 Platform_Y[0] <= <GND>
 Platform_Y[1] <= <GND>
 Platform_Y[2] <= <GND>

@@ -11,8 +11,8 @@ ENTITY platform IS
 --Generic(ADDR_WIDTH: integer := 12; DATA_WIDTH: integer := 1);
 
    PORT(
-			signal X : in std_logic_vector(9 downto 0);
-			SIGNAL Platform_X : out std_logic_vector(9 downto 0);
+			signal X : in std_logic_vector(10 downto 0);
+			SIGNAL Platform_X : out std_logic_vector(10 downto 0);
 			SIGNAL Platform_Y : out std_logic_vector(9 downto 0);
 			SIGNAL Platform_Width : out std_logic_vector(9 downto 0);
 			SIGNAL Platform_Height : out std_logic_vector(9 downto 0)
