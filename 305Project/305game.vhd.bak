@@ -1,0 +1,24 @@
+
+library IEEE;
+use  IEEE.STD_LOGIC_1164.all;
+use  IEEE.STD_LOGIC_ARITH.all;
+use  IEEE.STD_LOGIC_UNSIGNED.all;
+
+ENTITY Compute_RGB IS
+	PORT(	clock_25Mhz, red, green, blue		: IN	STD_LOGIC;
+			red_out, green_out, blue_out, horiz_sync_out, vert_sync_out	: OUT	STD_LOGIC;
+			pixel_row: OUT STD_LOGIC_VECTOR(9 DOWNTO 0);
+			pixel_column: OUT STD_LOGIC_VECTOR(10 DOWNTO 0)
+			);
+END Compute_RGB;
+
+ARCHITECTURE a OF VGA_SYNC IS
+	SIGNAL horiz_sync, vert_sync : STD_LOGIC;
+	SIGNAL video_on, video_on_v, video_on_h : STD_LOGIC;
+	SIGNAL h_count, v_count :STD_LOGIC_VECTOR(9 DOWNTO 0);
+
+BEGIN
+
+
+
+END a;
