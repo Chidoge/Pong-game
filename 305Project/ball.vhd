@@ -10,7 +10,6 @@ USE lpm.lpm_components.ALL;
 PACKAGE de0core IS
 	COMPONENT vga_sync
  		PORT(clock_25Mhz, red, green, blue	: IN	STD_LOGIC;
-				
          	red_out, green_out, blue_out	: OUT 	STD_LOGIC;
 			horiz_sync_out, vert_sync_out	: OUT 	STD_LOGIC;
 			pixel_row							: OUT STD_LOGIC_VECTOR(9 DOWNTO 0);
@@ -61,7 +60,7 @@ ENTITY ball IS
 Generic(ADDR_WIDTH: integer := 12; DATA_WIDTH: integer := 1);
 
    PORT(SIGNAL PB1, PB2, SW0, Clock 			: IN std_logic;
-		  SIGNAL Ball_X						: IN std_logic_vector(9 DOWNTO 0);
+		  SIGNAL Mouse_X						: IN std_logic_vector(9 DOWNTO 0);
         SIGNAL Red,Green,Blue 			: OUT std_logic;
         SIGNAL Horiz_sync,Vert_sync		: OUT std_logic
 		  );		
@@ -72,8 +71,7 @@ architecture behavior of ball is
 			-- Video Display Signals   
 SIGNAL Red_Data, Green_Data, Blue_Data, vert_sync_int,
 		reset, Ball_on, Ball_Color, Ball_Color2, Direction			: std_logic;
-SIGNAL Size	  									: std_logic_vector(9 DOWNTO 0);  
-
+SIGNAL Size	  									: std_logic_vector(9 DOWNTO 0);
 SIGNAL Ball_Y_pos				 				: std_logic_vector(9 DOWNTO 0);
 SIGNAL Ball_X_pos								: std_logic_vector(10 DOWNTO 0);
 SIGNAL pixel_row								: std_logic_vector(9 DOWNTO 0);
@@ -89,6 +87,9 @@ signal Platform_On : std_logic;
 
 -- signals for mouse
 signal mouse_row, mouse_column : std_logic_vector(9 downto 0);
+
+-- signal for score
+signal score_count : integer := 99;
 
 BEGIN           
    SYNC: vga_sync
@@ -108,12 +109,11 @@ BEGIN
 Size <= CONV_STD_LOGIC_VECTOR(8,10);
 
 
-X <= '0' & Ball_X;
+-- Update the position of the platform, can't move too far off the screen.
+X <=  '0' & Mouse_X when ('0' & Mouse_X  <= CONV_STD_LOGIC_VECTOR(640,11) - Platform_Width) else ('0' & CONV_STD_LOGIC_VECTOR(640,10) - Platform_Width);
 
-
-		-- need internal copy of vert_sync to read
+-- need internal copy of vert_sync to read
 vert_sync <= vert_sync_int;
-
 
 		-- Colors for pixel data on video signal
 Red_Data <= NOT Ball_on;-- '1' when ((rom_mux_output OR Platform_On OR Ball_On) = '0') else (Platform_On OR Ball_On);
@@ -137,19 +137,6 @@ BEGIN
 END IF;
 	
 END process RGB_Display;
-
---Init_mouse : process(PB1)
---begin
---	if (PB1 = '1')	then
---		mouse_reset <= '0';
---		x <= mouse_column;
---		mouse_col <= mouse_column;
---	else 
---		mouse_reset <= '1';
---		x <= "0001111111";
---		mouse_col <= "0001111111";
---	end if;
---end process;
 
 Change_color : process(SW0, PB2)
 begin
@@ -182,7 +169,23 @@ end process Draw_Platform;
 		
 
 Draw_Score_Text : process(pixel_row,pixel_column)
+variable digit1,digit2,digit3 : integer :=0;
 BEGIN
+	if (score_count >= 100) then
+		digit1 := score_count/100;
+		digit2 := (score_count - (digit1 * 100))/10;
+		digit3 := (score_count - (digit1 *100) - (digit2 * 10));
+	elsif (score_count >= 10) then
+		digit1 := 0;
+		digit2 := score_count/10;
+		digit3 := (score_count - (digit2 * 10));
+	else 
+		digit1 := 0;
+		digit2 := 0;
+		digit3 := score_count;
+	end if;
+
+	
 	-- PRINT "SCORE"
 	if (pixel_row>=CONV_STD_LOGIC_VECTOR(0,10) AND pixel_row <= CONV_STD_LOGIC_VECTOR(15,10)) then
 		-- S
@@ -200,6 +203,19 @@ BEGIN
 		-- E
 		elsif (pixel_column >= CONV_STD_LOGIC_VECTOR(65,10) AND pixel_column <= CONV_STD_LOGIC_VECTOR(80,10)) then
 			char_adr <= CONV_STD_LOGIC_VECTOR(5,6);
+		-- : 
+		elsif (pixel_column >= CONV_STD_LOGIC_VECTOR(81,10) AND pixel_column <= CONV_STD_LOGIC_VECTOR(96,10)) then
+			char_adr <= CONV_STD_LOGIC_VECTOR(63,6);
+			
+		-- First digit of the score
+		elsif (pixel_column >= CONV_STD_LOGIC_VECTOR(97,10) AND pixel_column <= CONV_STD_LOGIC_VECTOR(112,10)) then
+				char_adr <= CONV_STD_LOGIC_VECTOR(digit1 + 48,6);
+		-- Second digit of the score
+		elsif (pixel_column >= CONV_STD_LOGIC_VECTOR(113,10) AND pixel_column <= CONV_STD_LOGIC_VECTOR(128,10)) then
+				char_adr <= CONV_STD_LOGIC_VECTOR(digit2 + 48,6);
+		-- Third digit of the score
+		elsif (pixel_column >= CONV_STD_LOGIC_VECTOR(129,10) AND pixel_column <= CONV_STD_LOGIC_VECTOR(144,10)) then
+				char_adr <= CONV_STD_LOGIC_VECTOR(digit3 + 48,6);
 		else 
 			char_adr <= CONV_STD_LOGIC_VECTOR(32,6);
 		end if;
@@ -207,6 +223,7 @@ BEGIN
 			char_adr <= CONV_STD_LOGIC_VECTOR(32,6);
 	end if;
 end process Draw_Score_Text;
+
 
 
 Move_Ball: process
@@ -231,8 +248,7 @@ BEGIN
 			END IF;	
 			
 			IF ('0' & Ball_Y_Pos) >= CONV_STD_LOGIC_VECTOR(440,11) - Size THEN
-				IF ("00" & Ball_X_POS) >= (Platform_X - Size) AND ("00" & Ball_X_POS) <= (Platform_X + Platform_Width)
-				THEN
+				IF ("00" & Ball_X_POS) >= (Platform_X - Size) AND ("00" & Ball_X_POS) <= (Platform_X + Platform_Width) THEN
 					reset_ball := '1';
 				END IF;
 			END If;	
@@ -243,6 +259,7 @@ BEGIN
 				Ball_X_pos <= Ball_X_Pos + Ball_X_motion;
 			else 
 				Ball_Y_pos <= "0000000000";
+				score_count <= score_count + 1;
 				reset_ball := '0';
 			end if;
 END process Move_Ball;

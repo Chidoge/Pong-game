@@ -25,7 +25,7 @@ process(bcd)
             when "0111"=> ledsegment <="1111000";  -- '7'
             when "1000"=> ledsegment <="0000000";  -- '8'
             when "1001"=> ledsegment <="0011000";  -- '9'
-            when "1010"=> ledsegment <="0001000";	-- '10,A'
+				when "1010"=> ledsegment <="0001000";	-- '10,A'
 				when "1011"=> ledsegment <="0000011";	-- '11,B'
 				when "1100"=> ledsegment <="1000110";	-- '12,C'
 				when "1101"=> ledsegment <="0100001";	-- '13,D'

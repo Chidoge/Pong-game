@@ -1,14 +1,14 @@
-Analysis & Synthesis Status : Successful - Mon May 07 16:25:49 2018
+Analysis & Synthesis Status : Successful - Mon May 07 18:30:15 2018
 Quartus II 64-Bit Version : 13.0.0 Build 156 04/24/2013 SJ Full Version
 Revision Name : 305game
 Top-level Entity Name : 305game
 Family : Cyclone III
-Total logic elements : 391
-    Total combinational functions : 338
-    Dedicated logic registers : 156
-Total registers : 156
+Total logic elements : 2,225
+    Total combinational functions : 2,172
+    Dedicated logic registers : 188
+Total registers : 188
 Total pins : 25
 Total virtual pins : 0
 Total memory bits : 4,096
-Embedded Multiplier 9-bit elements : 0
+Embedded Multiplier 9-bit elements : 4
 Total PLLs : 0

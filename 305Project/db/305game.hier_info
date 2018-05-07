@@ -10,20 +10,20 @@ blue_out <= ball:inst.Blue
 red_out <= ball:inst.Red
 vert_sync_out <= ball:inst.Vert_sync
 horiz_sync_out <= ball:inst.Horiz_sync
-seg0[0] <= seven_seg:inst3.ledsegment[0]
-seg0[1] <= seven_seg:inst3.ledsegment[1]
-seg0[2] <= seven_seg:inst3.ledsegment[2]
-seg0[3] <= seven_seg:inst3.ledsegment[3]
-seg0[4] <= seven_seg:inst3.ledsegment[4]
-seg0[5] <= seven_seg:inst3.ledsegment[5]
-seg0[6] <= seven_seg:inst3.ledsegment[6]
-seg1[0] <= seven_seg:inst2.ledsegment[0]
-seg1[1] <= seven_seg:inst2.ledsegment[1]
-seg1[2] <= seven_seg:inst2.ledsegment[2]
-seg1[3] <= seven_seg:inst2.ledsegment[3]
-seg1[4] <= seven_seg:inst2.ledsegment[4]
-seg1[5] <= seven_seg:inst2.ledsegment[5]
-seg1[6] <= seven_seg:inst2.ledsegment[6]
+seg0[0] <= seven_seg:inst2.ledsegment[0]
+seg0[1] <= seven_seg:inst2.ledsegment[1]
+seg0[2] <= seven_seg:inst2.ledsegment[2]
+seg0[3] <= seven_seg:inst2.ledsegment[3]
+seg0[4] <= seven_seg:inst2.ledsegment[4]
+seg0[5] <= seven_seg:inst2.ledsegment[5]
+seg0[6] <= seven_seg:inst2.ledsegment[6]
+seg1[0] <= seven_seg:inst3.ledsegment[0]
+seg1[1] <= seven_seg:inst3.ledsegment[1]
+seg1[2] <= seven_seg:inst3.ledsegment[2]
+seg1[3] <= seven_seg:inst3.ledsegment[3]
+seg1[4] <= seven_seg:inst3.ledsegment[4]
+seg1[5] <= seven_seg:inst3.ledsegment[5]
+seg1[6] <= seven_seg:inst3.ledsegment[6]
 
 
 |305game|ball:inst
@@ -32,16 +32,26 @@ PB2 => Ball_Color2.IN1
 SW0 => Ball_Color.IN1
 Clock => vga_sync:SYNC.clock_25Mhz
 Clock => char_rom:CHAR.clock
-Ball_X[0] => platform:P_form.X[0]
-Ball_X[1] => platform:P_form.X[1]
-Ball_X[2] => platform:P_form.X[2]
-Ball_X[3] => platform:P_form.X[3]
-Ball_X[4] => platform:P_form.X[4]
-Ball_X[5] => platform:P_form.X[5]
-Ball_X[6] => platform:P_form.X[6]
-Ball_X[7] => platform:P_form.X[7]
-Ball_X[8] => platform:P_form.X[8]
-Ball_X[9] => platform:P_form.X[9]
+Mouse_X[0] => LessThan0.IN22
+Mouse_X[0] => X[0].DATAB
+Mouse_X[1] => LessThan0.IN21
+Mouse_X[1] => X[1].DATAB
+Mouse_X[2] => LessThan0.IN20
+Mouse_X[2] => X[2].DATAB
+Mouse_X[3] => LessThan0.IN19
+Mouse_X[3] => X[3].DATAB
+Mouse_X[4] => LessThan0.IN18
+Mouse_X[4] => X[4].DATAB
+Mouse_X[5] => LessThan0.IN17
+Mouse_X[5] => X[5].DATAB
+Mouse_X[6] => LessThan0.IN16
+Mouse_X[6] => X[6].DATAB
+Mouse_X[7] => LessThan0.IN15
+Mouse_X[7] => X[7].DATAB
+Mouse_X[8] => LessThan0.IN14
+Mouse_X[8] => X[8].DATAB
+Mouse_X[9] => LessThan0.IN13
+Mouse_X[9] => X[9].DATAB
 Red <= vga_sync:SYNC.red_out
 Green <= vga_sync:SYNC.green_out
 Blue <= vga_sync:SYNC.blue_out
@@ -536,7 +546,7 @@ mouse_cursor_column[8] <= cursor_column[8].DB_MAX_OUTPUT_PORT_TYPE
 mouse_cursor_column[9] <= cursor_column[9].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|305game|seven_seg:inst3
+|305game|seven_seg:inst2
 bcd[0] => Mux0.IN19
 bcd[0] => Mux1.IN19
 bcd[0] => Mux2.IN19
@@ -574,28 +584,7 @@ ledsegment[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
 ledsegment[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|305game|seven_seg_splitter:inst1
-mouse_col[0] => digit1[0].DATAIN
-mouse_col[1] => digit1[1].DATAIN
-mouse_col[2] => digit1[2].DATAIN
-mouse_col[3] => digit1[3].DATAIN
-mouse_col[4] => digit2[0].DATAIN
-mouse_col[5] => digit2[1].DATAIN
-mouse_col[6] => digit2[2].DATAIN
-mouse_col[7] => digit2[3].DATAIN
-mouse_col[8] => ~NO_FANOUT~
-mouse_col[9] => ~NO_FANOUT~
-digit1[0] <= mouse_col[0].DB_MAX_OUTPUT_PORT_TYPE
-digit1[1] <= mouse_col[1].DB_MAX_OUTPUT_PORT_TYPE
-digit1[2] <= mouse_col[2].DB_MAX_OUTPUT_PORT_TYPE
-digit1[3] <= mouse_col[3].DB_MAX_OUTPUT_PORT_TYPE
-digit2[0] <= mouse_col[4].DB_MAX_OUTPUT_PORT_TYPE
-digit2[1] <= mouse_col[5].DB_MAX_OUTPUT_PORT_TYPE
-digit2[2] <= mouse_col[6].DB_MAX_OUTPUT_PORT_TYPE
-digit2[3] <= mouse_col[7].DB_MAX_OUTPUT_PORT_TYPE
-
-
-|305game|seven_seg:inst2
+|305game|seven_seg:inst3
 bcd[0] => Mux0.IN19
 bcd[0] => Mux1.IN19
 bcd[0] => Mux2.IN19
