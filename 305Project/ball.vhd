@@ -51,7 +51,7 @@ SIGNAL Ball_Y_pos				 				: std_logic_vector(9 DOWNTO 0);
 signal Ball_On_Sig							: std_logic;
 
 -- Signal for score
-signal score_count : integer := 99;
+signal score_count : integer := 0;
 
 BEGIN           
 
@@ -120,7 +120,10 @@ BEGIN
 			-- If ball is caught, 460 is top of platform.
 			IF ('0' & Ball_Y_Pos) >= CONV_STD_LOGIC_VECTOR(460,11) - Size THEN
 				IF ("00" & Ball_X_POS) >= (Platform_X - Size) AND ("00" & Ball_X_POS) <= (Platform_X + Platform_Width) THEN
-					reset_ball := '1';
+					-- Make sure the ball is heading down to the platform
+					IF (Ball_Y_motion > CONV_STD_LOGIC_VECTOR(0,10)) THEN
+						reset_ball := '1';
+					END IF;
 				END IF;
 			END If;	
 			

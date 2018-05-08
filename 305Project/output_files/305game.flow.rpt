@@ -1,6 +1,6 @@
 Flow report for 305game
-Tue May 08 00:02:10 2018
-Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
+Tue May 08 14:22:14 2018
+Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Full Version
 
 
 ---------------------
@@ -37,26 +37,26 @@ applicable agreement for further details.
 
 
 
-+---------------------------------------------------------------------------------+
-; Flow Summary                                                                    ;
-+------------------------------------+--------------------------------------------+
-; Flow Status                        ; Successful - Tue May 08 00:02:10 2018      ;
-; Quartus II 64-Bit Version          ; 13.0.0 Build 156 04/24/2013 SJ Web Edition ;
-; Revision Name                      ; 305game                                    ;
-; Top-level Entity Name              ; 305game                                    ;
-; Family                             ; Cyclone III                                ;
-; Device                             ; EP3C16F484C8                               ;
-; Timing Models                      ; Final                                      ;
-; Total logic elements               ; 2,205 / 15,408 ( 14 % )                    ;
-;     Total combinational functions  ; 2,172 / 15,408 ( 14 % )                    ;
-;     Dedicated logic registers      ; 188 / 15,408 ( 1 % )                       ;
-; Total registers                    ; 188                                        ;
-; Total pins                         ; 25 / 347 ( 7 % )                           ;
-; Total virtual pins                 ; 0                                          ;
-; Total memory bits                  ; 4,096 / 516,096 ( < 1 % )                  ;
-; Embedded Multiplier 9-bit elements ; 4 / 112 ( 4 % )                            ;
-; Total PLLs                         ; 0 / 4 ( 0 % )                              ;
-+------------------------------------+--------------------------------------------+
++----------------------------------------------------------------------------------+
+; Flow Summary                                                                     ;
++------------------------------------+---------------------------------------------+
+; Flow Status                        ; Successful - Tue May 08 14:22:14 2018       ;
+; Quartus II 64-Bit Version          ; 13.0.0 Build 156 04/24/2013 SJ Full Version ;
+; Revision Name                      ; 305game                                     ;
+; Top-level Entity Name              ; 305game                                     ;
+; Family                             ; Cyclone III                                 ;
+; Device                             ; EP3C16F484C8                                ;
+; Timing Models                      ; Final                                       ;
+; Total logic elements               ; 2,207 / 15,408 ( 14 % )                     ;
+;     Total combinational functions  ; 2,169 / 15,408 ( 14 % )                     ;
+;     Dedicated logic registers      ; 188 / 15,408 ( 1 % )                        ;
+; Total registers                    ; 188                                         ;
+; Total pins                         ; 25 / 347 ( 7 % )                            ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 4,096 / 516,096 ( < 1 % )                   ;
+; Embedded Multiplier 9-bit elements ; 4 / 112 ( 4 % )                             ;
+; Total PLLs                         ; 0 / 4 ( 0 % )                               ;
++------------------------------------+---------------------------------------------+
 
 
 +-----------------------------------------+
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 05/08/2018 00:01:19 ;
+; Start date & time ; 05/08/2018 14:21:42 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; 305game             ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ applicable agreement for further details.
 +-------------------------------------+---------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                                 ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+---------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 113125800575389.152569447900232       ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 109952947368620.152574610109908       ; --            ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                                  ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (VHDL)                ; <None>        ; --          ; --             ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                    ; --            ; --          ; --             ;
@@ -94,12 +94,12 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:07     ; 1.0                     ; 521 MB              ; 00:00:07                           ;
-; Fitter                    ; 00:00:27     ; 1.0                     ; 702 MB              ; 00:00:26                           ;
-; Assembler                 ; 00:00:02     ; 1.0                     ; 413 MB              ; 00:00:02                           ;
-; TimeQuest Timing Analyzer ; 00:00:05     ; 1.0                     ; 489 MB              ; 00:00:06                           ;
-; EDA Netlist Writer        ; 00:00:04     ; 1.0                     ; 398 MB              ; 00:00:04                           ;
-; Total                     ; 00:00:45     ; --                      ; --                  ; 00:00:45                           ;
+; Analysis & Synthesis      ; 00:00:05     ; 1.0                     ; 626 MB              ; 00:00:05                           ;
+; Fitter                    ; 00:00:15     ; 2.1                     ; 1318 MB             ; 00:00:19                           ;
+; Assembler                 ; 00:00:02     ; 1.0                     ; 489 MB              ; 00:00:01                           ;
+; TimeQuest Timing Analyzer ; 00:00:04     ; 1.0                     ; 599 MB              ; 00:00:04                           ;
+; EDA Netlist Writer        ; 00:00:03     ; 1.0                     ; 474 MB              ; 00:00:03                           ;
+; Total                     ; 00:00:29     ; --                      ; --                  ; 00:00:32                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -108,11 +108,11 @@ applicable agreement for further details.
 +---------------------------+------------------+-----------+------------+----------------+
 ; Module Name               ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
 +---------------------------+------------------+-----------+------------+----------------+
-; Analysis & Synthesis      ; Lincoln-PC       ; Windows 7 ; 6.1        ; x86_64         ;
-; Fitter                    ; Lincoln-PC       ; Windows 7 ; 6.1        ; x86_64         ;
-; Assembler                 ; Lincoln-PC       ; Windows 7 ; 6.1        ; x86_64         ;
-; TimeQuest Timing Analyzer ; Lincoln-PC       ; Windows 7 ; 6.1        ; x86_64         ;
-; EDA Netlist Writer        ; Lincoln-PC       ; Windows 7 ; 6.1        ; x86_64         ;
+; Analysis & Synthesis      ; EN-352794        ; Windows 7 ; 6.2        ; x86_64         ;
+; Fitter                    ; EN-352794        ; Windows 7 ; 6.2        ; x86_64         ;
+; Assembler                 ; EN-352794        ; Windows 7 ; 6.2        ; x86_64         ;
+; TimeQuest Timing Analyzer ; EN-352794        ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer        ; EN-352794        ; Windows 7 ; 6.2        ; x86_64         ;
 +---------------------------+------------------+-----------+------------+----------------+
 
 

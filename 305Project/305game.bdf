@@ -872,17 +872,8 @@ applicable agreement for further details.
 	(bus)
 )
 (connector
-	(pt -336 88)
-	(pt -336 96)
-)
-(connector
 	(pt -328 88)
 	(pt -336 88)
-)
-(connector
-	(text "clk_25Mhz" (rect -406 80 -356 92)(font "Arial" ))
-	(pt -336 96)
-	(pt -416 96)
 )
 (connector
 	(text "platform_x_pos[10..0]" (rect -470 88 -362 100)(font "Arial" ))
@@ -1134,5 +1125,14 @@ applicable agreement for further details.
 	(pt 664 56)
 	(pt 536 56)
 	(bus)
+)
+(connector
+	(pt -336 88)
+	(pt -336 96)
+)
+(connector
+	(text "clk_25Mhz" (rect -526 80 -476 92)(font "Arial" ))
+	(pt -336 96)
+	(pt -536 96)
 )
 (junction (pt 648 232))
