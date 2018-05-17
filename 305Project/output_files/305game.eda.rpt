@@ -1,6 +1,6 @@
 EDA Netlist Writer report for 305game
-Tue May 08 14:22:14 2018
-Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Full Version
+Thu May 17 17:43:45 2018
+Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
 
 
 ---------------------
@@ -36,7 +36,7 @@ applicable agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Tue May 08 14:22:14 2018 ;
+; EDA Netlist Writer Status ; Successful - Thu May 17 17:43:45 2018 ;
 ; Revision Name             ; 305game                               ;
 ; Top-level Entity Name     ; 305game                               ;
 ; Family                    ; Cyclone III                           ;
@@ -66,20 +66,20 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------------------------+------------------------+
 
 
-+--------------------------------------------------------------------------------------------+
-; Simulation Generated Files                                                                 ;
-+--------------------------------------------------------------------------------------------+
-; Generated Files                                                                            ;
-+--------------------------------------------------------------------------------------------+
-; D:/305Project/305Project/305Project/simulation/modelsim/305game_8_1200mv_85c_slow.vho      ;
-; D:/305Project/305Project/305Project/simulation/modelsim/305game_8_1200mv_0c_slow.vho       ;
-; D:/305Project/305Project/305Project/simulation/modelsim/305game_min_1200mv_0c_fast.vho     ;
-; D:/305Project/305Project/305Project/simulation/modelsim/305game.vho                        ;
-; D:/305Project/305Project/305Project/simulation/modelsim/305game_8_1200mv_85c_vhd_slow.sdo  ;
-; D:/305Project/305Project/305Project/simulation/modelsim/305game_8_1200mv_0c_vhd_slow.sdo   ;
-; D:/305Project/305Project/305Project/simulation/modelsim/305game_min_1200mv_0c_vhd_fast.sdo ;
-; D:/305Project/305Project/305Project/simulation/modelsim/305game_vhd.sdo                    ;
-+--------------------------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------+
+; Simulation Generated Files                                                                          ;
++-----------------------------------------------------------------------------------------------------+
+; Generated Files                                                                                     ;
++-----------------------------------------------------------------------------------------------------+
+; C:/Users/Henry/Desktop/305Project/305Project/simulation/modelsim/305game_8_1200mv_85c_slow.vho      ;
+; C:/Users/Henry/Desktop/305Project/305Project/simulation/modelsim/305game_8_1200mv_0c_slow.vho       ;
+; C:/Users/Henry/Desktop/305Project/305Project/simulation/modelsim/305game_min_1200mv_0c_fast.vho     ;
+; C:/Users/Henry/Desktop/305Project/305Project/simulation/modelsim/305game.vho                        ;
+; C:/Users/Henry/Desktop/305Project/305Project/simulation/modelsim/305game_8_1200mv_85c_vhd_slow.sdo  ;
+; C:/Users/Henry/Desktop/305Project/305Project/simulation/modelsim/305game_8_1200mv_0c_vhd_slow.sdo   ;
+; C:/Users/Henry/Desktop/305Project/305Project/simulation/modelsim/305game_min_1200mv_0c_vhd_fast.sdo ;
+; C:/Users/Henry/Desktop/305Project/305Project/simulation/modelsim/305game_vhd.sdo                    ;
++-----------------------------------------------------------------------------------------------------+
 
 
 +-----------------------------+
@@ -87,20 +87,20 @@ applicable agreement for further details.
 +-----------------------------+
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit EDA Netlist Writer
-    Info: Version 13.0.0 Build 156 04/24/2013 SJ Full Version
-    Info: Processing started: Tue May 08 14:22:11 2018
+    Info: Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
+    Info: Processing started: Thu May 17 17:43:42 2018
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off 305game -c 305game
-Info (204019): Generated file 305game_8_1200mv_85c_slow.vho in folder "D:/305Project/305Project/305Project/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file 305game_8_1200mv_0c_slow.vho in folder "D:/305Project/305Project/305Project/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file 305game_min_1200mv_0c_fast.vho in folder "D:/305Project/305Project/305Project/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file 305game.vho in folder "D:/305Project/305Project/305Project/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file 305game_8_1200mv_85c_vhd_slow.sdo in folder "D:/305Project/305Project/305Project/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file 305game_8_1200mv_0c_vhd_slow.sdo in folder "D:/305Project/305Project/305Project/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file 305game_min_1200mv_0c_vhd_fast.sdo in folder "D:/305Project/305Project/305Project/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file 305game_vhd.sdo in folder "D:/305Project/305Project/305Project/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file 305game_8_1200mv_85c_slow.vho in folder "C:/Users/Henry/Desktop/305Project/305Project/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file 305game_8_1200mv_0c_slow.vho in folder "C:/Users/Henry/Desktop/305Project/305Project/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file 305game_min_1200mv_0c_fast.vho in folder "C:/Users/Henry/Desktop/305Project/305Project/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file 305game.vho in folder "C:/Users/Henry/Desktop/305Project/305Project/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file 305game_8_1200mv_85c_vhd_slow.sdo in folder "C:/Users/Henry/Desktop/305Project/305Project/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file 305game_8_1200mv_0c_vhd_slow.sdo in folder "C:/Users/Henry/Desktop/305Project/305Project/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file 305game_min_1200mv_0c_vhd_fast.sdo in folder "C:/Users/Henry/Desktop/305Project/305Project/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file 305game_vhd.sdo in folder "C:/Users/Henry/Desktop/305Project/305Project/simulation/modelsim/" for EDA simulation tool
 Info: Quartus II 64-Bit EDA Netlist Writer was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 486 megabytes
-    Info: Processing ended: Tue May 08 14:22:14 2018
+    Info: Peak virtual memory: 410 megabytes
+    Info: Processing ended: Thu May 17 17:43:45 2018
     Info: Elapsed time: 00:00:03
     Info: Total CPU time (on all processors): 00:00:03
 

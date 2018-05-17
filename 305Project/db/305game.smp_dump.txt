@@ -7,3 +7,9 @@ mouse_state.LOAD_COMMAND2 0 0 0 1 0 1
 mouse_state.WAIT_OUTPUT_READY 0 0 1 0 0 1 
 mouse_state.WAIT_CMD_ACK 0 1 0 0 0 1 
 mouse_state.INPUT_PACKETS 1 0 0 0 0 1 
+
+State Machine - |305game|State_controller:inst7|CS
+Name CS.training CS.game CS.menu 
+CS.menu 0 0 0 
+CS.game 0 1 1 
+CS.training 1 0 1 

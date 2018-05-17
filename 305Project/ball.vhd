@@ -23,8 +23,8 @@ ENTITY ball IS
 Generic(ADDR_WIDTH: integer := 12; DATA_WIDTH: integer := 1);
 
    PORT(
+			signal reset						:	in std_logic;
 			signal vert_sync					:	in	std_logic;
-			signal PB1 							:	in std_logic;
 			signal PB2							:	in std_logic;
 			signal SW0							:	in std_logic;
 			signal Clock						:	in std_logic;
@@ -59,10 +59,13 @@ score <= score_count;
 
 Ball_On <= Ball_On_Sig;
 
+
+
 --Turn ball on depending on pixels being drawn.
 Display_Ball: Process (Ball_X_pos, Ball_Y_pos, pixel_column, pixel_row, Size)
 BEGIN
 			-- Set Ball_on ='1' to display ball
+
  IF (("00" & Ball_X_pos <= pixel_column + Size) AND
  			-- compare positive numbers only
  	(Ball_X_pos + Size >= "00" & pixel_column)) AND
@@ -97,9 +100,9 @@ end process;
 
 
 Move_Ball: process
-variable Ball_Y_motion 						: std_logic_vector(9 DOWNTO 0);
-variable Ball_X_motion 						: std_logic_vector(9 DOWNTO 0);
-variable reset_ball							: std_logic := '0';
+variable Ball_Y_motion 		: std_logic_vector(9 DOWNTO 0);
+variable Ball_X_motion 		: std_logic_vector(9 DOWNTO 0);
+variable reset_ball			: std_logic := '0';
 BEGIN
 			-- Move ball once every vertical sync
 	WAIT UNTIL vert_sync'event and vert_sync = '1';
@@ -128,7 +131,11 @@ BEGIN
 			END If;	
 			
 			-- Compute next ball Y position
-			if (reset_ball = '0') then
+			if (reset = '1') then
+				Ball_X_pos <= "00000000000";
+				Ball_Y_pos <= "0000000000";
+				score_count <= 0;
+			elsif (reset_ball = '0') then
 				Ball_Y_pos <= Ball_Y_pos + Ball_Y_motion;
 				Ball_X_pos <= Ball_X_Pos + Ball_X_motion;
 			else 

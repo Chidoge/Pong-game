@@ -6,6 +6,7 @@ use  IEEE.STD_LOGIC_UNSIGNED.all;
 
 ENTITY Compute_RGB IS
 	PORT(	
+			state					: 	in std_logic_vector(1 downto 0);
 			Ball_On				:	in std_logic;
 			Ball_Color			:	in std_logic;
 			Ball_Color2			:	in std_logic;
@@ -22,12 +23,13 @@ ARCHITECTURE behaviour OF Compute_RGB IS
 
 
 BEGIN
+
 			-- Colors for pixel data on video signal
-Red_Value <= NOT Ball_on;-- '1' when ((rom_mux_output OR Platform_On OR Ball_On) = '0') else (Platform_On OR Ball_On);
+Red_Value <= NOT Ball_on when state = "01" else '1';
 
 		-- Turn off Green and Blue when displaying ball
-Green_Value <=	NOT (rom_mux_output OR Ball_Color);-- '1' when ((rom_mux_output OR Platform_On OR Ball_On) = '0') else rom_mux_output; --OR w/e;
-Blue_Value <= NOT (Platform_On OR Ball_Color2);--'1' when ((rom_mux_output OR Platform_On OR Ball_On) = '0') else rom_mux_output; -- OR w/e;
+Green_Value <=	NOT (rom_mux_output OR Ball_Color) when state = "01" else NOT (rom_mux_output);
+Blue_Value <= NOT (Platform_On OR Ball_Color2) when state = "01" else '1';
 
 
 END architecture behaviour;
