@@ -11,7 +11,9 @@ ENTITY Text_Drawer IS
 			signal pixel_row		:	in	 std_logic_vector(9 downto 0);
 			signal pixel_column	:	in	 std_logic_vector(10 downto 0);
 			signal score			:	in  integer;
-			signal char_adr		:	out std_logic_vector(5 downto 0)
+			signal char_adr		:	out std_logic_vector(5 downto 0);
+			signal font_row		:	out std_logic_vector(2 downto 0);
+			signal font_col		:	out std_logic_vector(2 downto 0)
 			);
 END Text_Drawer;
 
@@ -42,24 +44,25 @@ Draw_Score_Text : process(pixel_row,pixel_column)
 		
 		if (state = "00") then
 			-- Menu - print pong
-			if (pixel_row>=CONV_STD_LOGIC_VECTOR(48,10) AND pixel_row <= CONV_STD_LOGIC_VECTOR(63,10)) then
-				if (pixel_column >= CONV_STD_LOGIC_VECTOR(288,10) AND pixel_column <= CONV_STD_LOGIC_VECTOR(303,10)) then
+			if (pixel_row(9 downto 2)>=CONV_STD_LOGIC_VECTOR(16,10) AND pixel_row(9 downto 2) <= CONV_STD_LOGIC_VECTOR(31,10)) then
+				if (pixel_column(9 downto 2) >= CONV_STD_LOGIC_VECTOR(48,10) AND pixel_column(9 downto 2) <= CONV_STD_LOGIC_VECTOR(63,10)) then
 					--P 
 					char_adr <= CONV_STD_LOGIC_VECTOR(16,6);
-				elsif (pixel_column >= CONV_STD_LOGIC_VECTOR(304,10) AND pixel_column <= CONV_STD_LOGIC_VECTOR(319,10)) then
+				elsif (pixel_column(9 downto 2) >= CONV_STD_LOGIC_VECTOR(64,10) AND pixel_column(9 downto 2) <= CONV_STD_LOGIC_VECTOR(79,10)) then
 					--O
 					char_adr <= CONV_STD_LOGIC_VECTOR(15,6);
-				elsif (pixel_column >= CONV_STD_LOGIC_VECTOR(320,10) AND pixel_column <= CONV_STD_LOGIC_VECTOR(335,10)) then
+				elsif (pixel_column(9 downto 2) >= CONV_STD_LOGIC_VECTOR(80,10) AND pixel_column(9 downto 2) <= CONV_STD_LOGIC_VECTOR(95,10)) then
 					--N 
 					char_adr <= CONV_STD_LOGIC_VECTOR(14,6);
-				elsif (pixel_column >= CONV_STD_LOGIC_VECTOR(336,10) AND pixel_column <= CONV_STD_LOGIC_VECTOR(351,10)) then
+				elsif (pixel_column(9 downto 2) >= CONV_STD_LOGIC_VECTOR(96,10) AND pixel_column(9 downto 2) <= CONV_STD_LOGIC_VECTOR(111,10)) then
 					--G 
 					char_adr <= CONV_STD_LOGIC_VECTOR(7,6);
 				else 
 					-- Nothing
 					char_adr <= CONV_STD_LOGIC_VECTOR(32,6);
 				end if;
-				
+				font_row <= pixel_row(5 downto 3);
+				font_col <= pixel_column(5 downto 3);
 				-- print game
 			elsif (pixel_row>=CONV_STD_LOGIC_VECTOR(208,10) AND pixel_row <= CONV_STD_LOGIC_VECTOR(223,10)) then
 					--Arrow
@@ -85,6 +88,8 @@ Draw_Score_Text : process(pixel_row,pixel_column)
 					-- Nothing
 					char_adr <= CONV_STD_LOGIC_VECTOR(32,6);
 				end if;
+				font_row <= pixel_row(3 downto 1);
+				font_col <= pixel_column(3 downto 1);
 				-- training
 			elsif (pixel_row>=CONV_STD_LOGIC_VECTOR(240,10) AND pixel_row <= CONV_STD_LOGIC_VECTOR(255,10)) then
 				-- Arrow
@@ -121,7 +126,8 @@ Draw_Score_Text : process(pixel_row,pixel_column)
 					-- Nothing
 					char_adr <= CONV_STD_LOGIC_VECTOR(32,6);
 				end if;
-			
+				font_row <= pixel_row(3 downto 1);
+				font_col <= pixel_column(3 downto 1);
 				
 			else
 					char_adr <= CONV_STD_LOGIC_VECTOR(32,6);
@@ -164,6 +170,11 @@ Draw_Score_Text : process(pixel_row,pixel_column)
 			else 
 					char_adr <= CONV_STD_LOGIC_VECTOR(32,6);
 			end if;
+			font_row <= pixel_row(3 downto 1);
+			font_col <= pixel_column(3 downto 1);
+		else --temp code. replace with training screen
+			font_row <= pixel_row(3 downto 1);
+			font_col <= pixel_column(3 downto 1);
 		end if;
 end process Draw_Score_Text;
 

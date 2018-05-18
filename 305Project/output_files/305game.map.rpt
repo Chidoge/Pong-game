@@ -1,5 +1,5 @@
 Analysis & Synthesis report for 305game
-Thu May 17 17:43:11 2018
+Fri May 18 13:12:11 2018
 Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
 
 
@@ -59,13 +59,13 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu May 17 17:43:11 2018      ;
+; Analysis & Synthesis Status        ; Successful - Fri May 18 13:12:11 2018      ;
 ; Quartus II 64-Bit Version          ; 13.0.0 Build 156 04/24/2013 SJ Web Edition ;
 ; Revision Name                      ; 305game                                    ;
 ; Top-level Entity Name              ; 305game                                    ;
 ; Family                             ; Cyclone III                                ;
-; Total logic elements               ; 2,199                                      ;
-;     Total combinational functions  ; 2,146                                      ;
+; Total logic elements               ; 2,231                                      ;
+;     Total combinational functions  ; 2,178                                      ;
 ;     Dedicated logic registers      ; 192                                        ;
 ; Total registers                    ; 192                                        ;
 ; Total pins                         ; 26                                         ;
@@ -239,16 +239,16 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+---------------------------+
 ; Resource                                    ; Usage                     ;
 +---------------------------------------------+---------------------------+
-; Estimated Total logic elements              ; 2,199                     ;
+; Estimated Total logic elements              ; 2,231                     ;
 ;                                             ;                           ;
-; Total combinational functions               ; 2146                      ;
+; Total combinational functions               ; 2178                      ;
 ; Logic element usage by number of LUT inputs ;                           ;
-;     -- 4 input functions                    ; 662                       ;
-;     -- 3 input functions                    ; 649                       ;
-;     -- <=2 input functions                  ; 835                       ;
+;     -- 4 input functions                    ; 678                       ;
+;     -- 3 input functions                    ; 657                       ;
+;     -- <=2 input functions                  ; 843                       ;
 ;                                             ;                           ;
 ; Logic elements by mode                      ;                           ;
-;     -- normal mode                          ; 1458                      ;
+;     -- normal mode                          ; 1490                      ;
 ;     -- arithmetic mode                      ; 688                       ;
 ;                                             ;                           ;
 ; Total registers                             ; 192                       ;
@@ -259,8 +259,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Total memory bits                           ; 4096                      ;
 ; Embedded Multiplier 9-bit elements          ; 0                         ;
 ; Maximum fan-out node                        ; ball:inst|score_count[31] ;
-; Maximum fan-out                             ; 115                       ;
-; Total fan-out                               ; 6832                      ;
+; Maximum fan-out                             ; 116                       ;
+; Total fan-out                               ; 6906                      ;
 ; Average fan-out                             ; 2.84                      ;
 +---------------------------------------------+---------------------------+
 
@@ -270,14 +270,14 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                      ; Library Name ;
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------+--------------+
-; |305game                                  ; 2146 (1)          ; 192 (0)      ; 4096        ; 0            ; 0       ; 0         ; 26   ; 0            ; |305game                                                                                                                 ;              ;
+; |305game                                  ; 2178 (1)          ; 192 (0)      ; 4096        ; 0            ; 0       ; 0         ; 26   ; 0            ; |305game                                                                                                                 ;              ;
 ;    |MOUSE:inst5|                          ; 81 (81)           ; 88 (88)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |305game|MOUSE:inst5                                                                                                     ;              ;
 ;    |State_controller:inst7|               ; 7 (7)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |305game|State_controller:inst7                                                                                          ;              ;
-;    |Text_Drawer:inst10|                   ; 1776 (174)        ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |305game|Text_Drawer:inst10                                                                                              ;              ;
-;       |lpm_divide:Div0|                   ; 641 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |305game|Text_Drawer:inst10|lpm_divide:Div0                                                                              ;              ;
-;          |lpm_divide_jvo:auto_generated|  ; 641 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |305game|Text_Drawer:inst10|lpm_divide:Div0|lpm_divide_jvo:auto_generated                                                ;              ;
-;             |abs_divider_nbg:divider|     ; 641 (8)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |305game|Text_Drawer:inst10|lpm_divide:Div0|lpm_divide_jvo:auto_generated|abs_divider_nbg:divider                        ;              ;
-;                |alt_u_div_36f:divider|    ; 586 (586)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |305game|Text_Drawer:inst10|lpm_divide:Div0|lpm_divide_jvo:auto_generated|abs_divider_nbg:divider|alt_u_div_36f:divider  ;              ;
+;    |Text_Drawer:inst10|                   ; 1808 (197)        ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |305game|Text_Drawer:inst10                                                                                              ;              ;
+;       |lpm_divide:Div0|                   ; 650 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |305game|Text_Drawer:inst10|lpm_divide:Div0                                                                              ;              ;
+;          |lpm_divide_jvo:auto_generated|  ; 650 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |305game|Text_Drawer:inst10|lpm_divide:Div0|lpm_divide_jvo:auto_generated                                                ;              ;
+;             |abs_divider_nbg:divider|     ; 650 (8)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |305game|Text_Drawer:inst10|lpm_divide:Div0|lpm_divide_jvo:auto_generated|abs_divider_nbg:divider                        ;              ;
+;                |alt_u_div_36f:divider|    ; 595 (595)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |305game|Text_Drawer:inst10|lpm_divide:Div0|lpm_divide_jvo:auto_generated|abs_divider_nbg:divider|alt_u_div_36f:divider  ;              ;
 ;                |lpm_abs_9v9:my_abs_num|   ; 47 (47)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |305game|Text_Drawer:inst10|lpm_divide:Div0|lpm_divide_jvo:auto_generated|abs_divider_nbg:divider|lpm_abs_9v9:my_abs_num ;              ;
 ;       |lpm_divide:Div1|                   ; 498 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |305game|Text_Drawer:inst10|lpm_divide:Div1                                                                              ;              ;
 ;          |lpm_divide_gvo:auto_generated|  ; 498 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |305game|Text_Drawer:inst10|lpm_divide:Div1|lpm_divide_gvo:auto_generated                                                ;              ;
@@ -340,22 +340,28 @@ Encoding Type:  One-Hot
 +-------------+-------------+---------+--------------+
 
 
-+------------------------------------------------------------------------------------------------------------------+
-; User-Specified and Inferred Latches                                                                              ;
-+----------------------------------------------------+------------------------------------+------------------------+
-; Latch Name                                         ; Latch Enable Signal                ; Free of Timing Hazards ;
-+----------------------------------------------------+------------------------------------+------------------------+
-; State_controller:inst7|NS.game_65                  ; State_controller:inst7|CS.game     ; yes                    ;
-; Text_Drawer:inst10|char_adr[0]                     ; State_controller:inst7|CS.training ; yes                    ;
-; Text_Drawer:inst10|char_adr[1]                     ; State_controller:inst7|CS.training ; yes                    ;
-; Text_Drawer:inst10|char_adr[2]                     ; State_controller:inst7|CS.training ; yes                    ;
-; Text_Drawer:inst10|char_adr[3]                     ; State_controller:inst7|CS.training ; yes                    ;
-; Text_Drawer:inst10|char_adr[4]                     ; State_controller:inst7|CS.training ; yes                    ;
-; Text_Drawer:inst10|char_adr[5]                     ; State_controller:inst7|CS.training ; yes                    ;
-; State_controller:inst7|NS.training_57              ; State_controller:inst7|CS.game     ; yes                    ;
-; State_controller:inst7|NS.menu_73                  ; State_controller:inst7|CS.game     ; yes                    ;
-; Number of user-specified and inferred latches = 9  ;                                    ;                        ;
-+----------------------------------------------------+------------------------------------+------------------------+
++-------------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                               ;
++-----------------------------------------------------+------------------------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal                ; Free of Timing Hazards ;
++-----------------------------------------------------+------------------------------------+------------------------+
+; Text_Drawer:inst10|font_col[1]                      ; Text_Drawer:inst10|font_row[2]     ; yes                    ;
+; Text_Drawer:inst10|font_col[0]                      ; Text_Drawer:inst10|font_row[2]     ; yes                    ;
+; Text_Drawer:inst10|font_col[2]                      ; Text_Drawer:inst10|font_row[2]     ; yes                    ;
+; State_controller:inst7|NS.game_65                   ; State_controller:inst7|CS.game     ; yes                    ;
+; Text_Drawer:inst10|font_row[0]                      ; Text_Drawer:inst10|font_row[2]     ; yes                    ;
+; Text_Drawer:inst10|font_row[1]                      ; Text_Drawer:inst10|font_row[2]     ; yes                    ;
+; Text_Drawer:inst10|font_row[2]                      ; Text_Drawer:inst10|font_row[2]     ; yes                    ;
+; Text_Drawer:inst10|char_adr[0]                      ; State_controller:inst7|CS.training ; yes                    ;
+; Text_Drawer:inst10|char_adr[1]                      ; State_controller:inst7|CS.training ; yes                    ;
+; Text_Drawer:inst10|char_adr[2]                      ; State_controller:inst7|CS.training ; yes                    ;
+; Text_Drawer:inst10|char_adr[3]                      ; State_controller:inst7|CS.training ; yes                    ;
+; Text_Drawer:inst10|char_adr[4]                      ; State_controller:inst7|CS.training ; yes                    ;
+; Text_Drawer:inst10|char_adr[5]                      ; State_controller:inst7|CS.training ; yes                    ;
+; State_controller:inst7|NS.menu_73                   ; State_controller:inst7|CS.game     ; yes                    ;
+; State_controller:inst7|NS.training_57               ; State_controller:inst7|CS.game     ; yes                    ;
+; Number of user-specified and inferred latches = 15  ;                                    ;                        ;
++-----------------------------------------------------+------------------------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
@@ -403,8 +409,8 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
 ; Total registers                              ; 192   ;
-; Number of registers using Synchronous Clear  ; 17    ;
-; Number of registers using Synchronous Load   ; 42    ;
+; Number of registers using Synchronous Clear  ; 49    ;
+; Number of registers using Synchronous Load   ; 10    ;
 ; Number of registers using Asynchronous Clear ; 16    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 132   ;
@@ -432,12 +438,13 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------+
-; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |305game|MOUSE:inst5|new_cursor_column[6] ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |305game|VGA_SYNC:inst1|v_count[9]        ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |305game|ball:inst|Ball_Y_pos[2]          ;
-; 3:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |305game|ball:inst|Ball_X_pos[9]          ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |305game|MOUSE:inst5|new_cursor_column[8] ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |305game|VGA_SYNC:inst1|v_count[5]        ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |305game|ball:inst|Ball_Y_pos[5]          ;
+; 3:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |305game|ball:inst|Ball_X_pos[8]          ;
 ; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |305game|ball:inst|score_count[18]        ;
-; 5:1                ; 10 bits   ; 30 LEs        ; 20 LEs               ; 10 LEs                 ; Yes        ; |305game|MOUSE:inst5|cursor_column[5]     ;
+; 5:1                ; 10 bits   ; 30 LEs        ; 20 LEs               ; 10 LEs                 ; Yes        ; |305game|MOUSE:inst5|cursor_column[0]     ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |305game|Text_Drawer:inst10|font_row[2]   ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |305game|ball:inst|Ball_X_motion          ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |305game|ball:inst|Ball_Y_motion          ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------+
@@ -693,7 +700,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
-    Info: Processing started: Thu May 17 17:43:05 2018
+    Info: Processing started: Fri May 18 13:12:06 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off 305game -c 305game
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file state_controller.vhd
@@ -781,27 +788,35 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/alts
     Info (12023): Found entity 1: altsyncram_kt91
 Info (12128): Elaborating entity "altsyncram_kt91" for hierarchy "char_rom:inst9|altsyncram:altsyncram_component|altsyncram_kt91:auto_generated"
 Info (12128): Elaborating entity "Text_Drawer" for hierarchy "Text_Drawer:inst10"
-Warning (10492): VHDL Process Statement warning at Text_Drawer.vhd(27): signal "score" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at Text_Drawer.vhd(28): signal "score" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10492): VHDL Process Statement warning at Text_Drawer.vhd(29): signal "score" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10492): VHDL Process Statement warning at Text_Drawer.vhd(30): signal "score" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10492): VHDL Process Statement warning at Text_Drawer.vhd(31): signal "score" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at Text_Drawer.vhd(32): signal "score" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10492): VHDL Process Statement warning at Text_Drawer.vhd(33): signal "score" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at Text_Drawer.vhd(34): signal "score" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at Text_Drawer.vhd(38): signal "score" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at Text_Drawer.vhd(43): signal "state" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at Text_Drawer.vhd(66): signal "Switch" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at Text_Drawer.vhd(82): signal "Switch" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at Text_Drawer.vhd(91): signal "Switch" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at Text_Drawer.vhd(118): signal "Switch" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at Text_Drawer.vhd(130): signal "state" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10631): VHDL Process Statement warning at Text_Drawer.vhd(24): inferring latch(es) for signal or variable "char_adr", which holds its previous value in one or more paths through the process
-Info (10041): Inferred latch for "char_adr[0]" at Text_Drawer.vhd(24)
-Info (10041): Inferred latch for "char_adr[1]" at Text_Drawer.vhd(24)
-Info (10041): Inferred latch for "char_adr[2]" at Text_Drawer.vhd(24)
-Info (10041): Inferred latch for "char_adr[3]" at Text_Drawer.vhd(24)
-Info (10041): Inferred latch for "char_adr[4]" at Text_Drawer.vhd(24)
-Info (10041): Inferred latch for "char_adr[5]" at Text_Drawer.vhd(24)
+Warning (10492): VHDL Process Statement warning at Text_Drawer.vhd(35): signal "score" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at Text_Drawer.vhd(36): signal "score" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at Text_Drawer.vhd(40): signal "score" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at Text_Drawer.vhd(45): signal "state" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at Text_Drawer.vhd(69): signal "Switch" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at Text_Drawer.vhd(85): signal "Switch" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at Text_Drawer.vhd(96): signal "Switch" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at Text_Drawer.vhd(123): signal "Switch" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at Text_Drawer.vhd(136): signal "state" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10631): VHDL Process Statement warning at Text_Drawer.vhd(26): inferring latch(es) for signal or variable "char_adr", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at Text_Drawer.vhd(26): inferring latch(es) for signal or variable "font_row", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at Text_Drawer.vhd(26): inferring latch(es) for signal or variable "font_col", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "font_col[0]" at Text_Drawer.vhd(26)
+Info (10041): Inferred latch for "font_col[1]" at Text_Drawer.vhd(26)
+Info (10041): Inferred latch for "font_col[2]" at Text_Drawer.vhd(26)
+Info (10041): Inferred latch for "font_row[0]" at Text_Drawer.vhd(26)
+Info (10041): Inferred latch for "font_row[1]" at Text_Drawer.vhd(26)
+Info (10041): Inferred latch for "font_row[2]" at Text_Drawer.vhd(26)
+Info (10041): Inferred latch for "char_adr[0]" at Text_Drawer.vhd(26)
+Info (10041): Inferred latch for "char_adr[1]" at Text_Drawer.vhd(26)
+Info (10041): Inferred latch for "char_adr[2]" at Text_Drawer.vhd(26)
+Info (10041): Inferred latch for "char_adr[3]" at Text_Drawer.vhd(26)
+Info (10041): Inferred latch for "char_adr[4]" at Text_Drawer.vhd(26)
+Info (10041): Inferred latch for "char_adr[5]" at Text_Drawer.vhd(26)
 Info (12128): Elaborating entity "seven_seg" for hierarchy "seven_seg:inst2"
 Info (278001): Inferred 4 megafunctions from design logic
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Text_Drawer:inst10|Div0"
@@ -860,6 +875,18 @@ Info (12131): Elaborated megafunction instantiation "Text_Drawer:inst10|lpm_mult
 Info (12131): Elaborated megafunction instantiation "Text_Drawer:inst10|lpm_mult:Mult0|altshift:external_latency_ffs", which is child of megafunction instantiation "Text_Drawer:inst10|lpm_mult:Mult0"
 Info (13014): Ignored 93 buffer(s)
     Info (13016): Ignored 93 CARRY_SUM buffer(s)
+Warning (13012): Latch Text_Drawer:inst10|font_col[1] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal State_controller:inst7|CS.menu
+Warning (13012): Latch Text_Drawer:inst10|font_col[0] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal State_controller:inst7|CS.menu
+Warning (13012): Latch Text_Drawer:inst10|font_col[2] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal State_controller:inst7|CS.menu
+Warning (13012): Latch Text_Drawer:inst10|font_row[0] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal State_controller:inst7|CS.menu
+Warning (13012): Latch Text_Drawer:inst10|font_row[1] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst1|pixel_row[4]
+Warning (13012): Latch Text_Drawer:inst10|font_row[2] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst1|pixel_row[5]
 Info (13000): Registers with preset signals will power-up high
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Info (286030): Timing-Driven Synthesis is running
@@ -869,16 +896,16 @@ Info (17016): Found the following redundant logic cells in design
     Info (17048): Logic cell "Text_Drawer:inst10|Add0~62"
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 2243 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 2275 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 5 input pins
     Info (21059): Implemented 19 output pins
     Info (21060): Implemented 2 bidirectional pins
-    Info (21061): Implemented 2209 logic cells
+    Info (21061): Implemented 2241 logic cells
     Info (21064): Implemented 8 RAM segments
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 32 warnings
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 46 warnings
     Info: Peak virtual memory: 521 megabytes
-    Info: Processing ended: Thu May 17 17:43:11 2018
-    Info: Elapsed time: 00:00:06
-    Info: Total CPU time (on all processors): 00:00:06
+    Info: Processing ended: Fri May 18 13:12:11 2018
+    Info: Elapsed time: 00:00:05
+    Info: Total CPU time (on all processors): 00:00:05
 
 
