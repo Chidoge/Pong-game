@@ -1,14 +1,14 @@
-Fitter Status : Successful - Fri May 18 13:12:31 2018
+Fitter Status : Successful - Sun May 20 17:16:32 2018
 Quartus II 64-Bit Version : 13.0.0 Build 156 04/24/2013 SJ Web Edition
 Revision Name : 305game
 Top-level Entity Name : 305game
 Family : Cyclone III
 Device : EP3C16F484C8
 Timing Models : Final
-Total logic elements : 2,212 / 15,408 ( 14 % )
-    Total combinational functions : 2,179 / 15,408 ( 14 % )
-    Dedicated logic registers : 192 / 15,408 ( 1 % )
-Total registers : 192
+Total logic elements : 4,041 / 15,408 ( 26 % )
+    Total combinational functions : 4,002 / 15,408 ( 26 % )
+    Dedicated logic registers : 269 / 15,408 ( 2 % )
+Total registers : 269
 Total pins : 26 / 347 ( 7 % )
 Total virtual pins : 0
 Total memory bits : 4,096 / 516,096 ( < 1 % )

@@ -34,6 +34,7 @@ Generic(ADDR_WIDTH: integer := 12; DATA_WIDTH: integer := 1);
 			signal pixel_row					:	in std_logic_vector(9 downto 0);
 			signal pixel_column				:	in std_logic_vector(10 downto 0);
 			signal Mouse_X						:	in std_logic_vector(9 downto 0);
+			signal rand_lfsr					:	in std_logic_vector(9 downto 0);
 			signal Ball_On						: out std_logic;
 			signal Ball_Color					: out std_logic;
 			signal Ball_Color2				: out std_logic;
@@ -140,6 +141,11 @@ BEGIN
 				Ball_X_pos <= Ball_X_Pos + Ball_X_motion;
 			else 
 				Ball_Y_pos <= "0000000000";
+				if ('0' & rand_lfsr >= "01001111111") then
+					Ball_X_pos <= "00" & rand_lfsr(9 downto 1);
+				else
+					Ball_X_pos <= '0' & rand_lfsr;
+				end if;
 				score_count <= score_count + 1;
 				reset_ball := '0';
 			end if;

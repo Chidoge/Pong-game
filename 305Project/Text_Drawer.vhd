@@ -6,14 +6,15 @@ use  IEEE.STD_LOGIC_UNSIGNED.all;
 
 ENTITY Text_Drawer IS
 	PORT(	
-			signal state			:	in std_logic_vector(1 downto 0);
-			signal Switch			:	in std_logic;
-			signal pixel_row		:	in	 std_logic_vector(9 downto 0);
-			signal pixel_column	:	in	 std_logic_vector(10 downto 0);
-			signal score			:	in  integer;
-			signal char_adr		:	out std_logic_vector(5 downto 0);
-			signal font_row		:	out std_logic_vector(2 downto 0);
-			signal font_col		:	out std_logic_vector(2 downto 0)
+			signal time_remaining	:	in integer;
+			signal state				:	in std_logic_vector(1 downto 0);
+			signal Switch				:	in std_logic;
+			signal pixel_row			:	in	 std_logic_vector(9 downto 0);
+			signal pixel_column		:	in	 std_logic_vector(10 downto 0);
+			signal score				:	in  integer;
+			signal char_adr			:	out std_logic_vector(5 downto 0);
+			signal font_row			:	out std_logic_vector(2 downto 0);
+			signal font_col			:	out std_logic_vector(2 downto 0)
 			);
 END Text_Drawer;
 
@@ -25,6 +26,7 @@ BEGIN
 --Draws the player score.
 Draw_Score_Text : process(pixel_row,pixel_column)
 	variable digit1,digit2,digit3 : integer range 0 to 9 :=0;
+	variable time_digit1,time_digit2,time_digit3 : integer range 0 to 9 := 0;
 	BEGIN
 		if (score >= 100) then
 			digit1 := score/100;
@@ -40,7 +42,19 @@ Draw_Score_Text : process(pixel_row,pixel_column)
 			digit3 := score;
 		end if;
 
-		
+		if (time_remaining >= 100) then
+			time_digit1 := time_remaining/100;
+			time_digit2 := (time_remaining - (time_digit1 * 100))/10;
+			time_digit3 := (time_remaining - (time_digit1 *100) - (time_digit2 * 10));
+		elsif (time_remaining >= 10) then
+			time_digit1 := 0;
+			time_digit2 := time_remaining/10;
+			time_digit3 := (time_remaining - (time_digit2 * 10));
+		else 
+			time_digit1 := 0;
+			time_digit2 := 0;
+			time_digit3 := time_remaining;
+		end if;
 		
 		if (state = "00") then
 			-- Menu - print pong
@@ -164,6 +178,12 @@ Draw_Score_Text : process(pixel_row,pixel_column)
 				-- Third digit of the score
 				elsif (pixel_column >= CONV_STD_LOGIC_VECTOR(129,10) AND pixel_column <= CONV_STD_LOGIC_VECTOR(144,10)) then
 						char_adr <= CONV_STD_LOGIC_VECTOR(digit3 + 48,6);
+				elsif (pixel_column >= CONV_STD_LOGIC_VECTOR(400,10) AND pixel_column <= CONV_STD_LOGIC_VECTOR(415,10)) then
+						char_adr <= CONV_STD_LOGIC_VECTOR(time_digit1 + 48,6);
+				elsif (pixel_column >= CONV_STD_LOGIC_VECTOR(416,10) AND pixel_column <= CONV_STD_LOGIC_VECTOR(431,10)) then
+						char_adr <= CONV_STD_LOGIC_VECTOR(time_digit2 + 48,6);
+				elsif (pixel_column >= CONV_STD_LOGIC_VECTOR(432,10) AND pixel_column <= CONV_STD_LOGIC_VECTOR(447,10)) then
+						char_adr <= CONV_STD_LOGIC_VECTOR(time_digit3 + 48,6);		
 				else 
 					char_adr <= CONV_STD_LOGIC_VECTOR(32,6);
 				end if;

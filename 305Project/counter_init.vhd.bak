@@ -1,0 +1,43 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity counter is
+port (
+	Load	: in bit;
+	Init_time : in integer;
+	Enable : in bit;
+	clk : in bit;
+	Q_Out: 	out integer
+	);
+end entity counter;
+
+architecture behaviour of counter is
+
+begin
+
+
+process(Enable,clk,Load)
+variable v_output : integer :=0;
+begin
+	if (Load'event and Load = '1') then
+		v_output := Init_time;
+	end if;
+	
+	if (clk'event and clk = '1') then
+		if (Enable = '1') then
+			if (v_output = 0) then
+				v_output := 0;
+			else 
+				v_output := v_output - 1;
+			end if;
+		end if;
+	end if;
+	Q_out <= v_output;
+	
+	
+end process;
+
+
+
+end architecture behaviour;

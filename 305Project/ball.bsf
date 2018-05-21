@@ -101,6 +101,13 @@ applicable agreement for further details.
 		(line (pt 0 192)(pt 16 192)(line_width 3))
 	)
 	(port
+		(pt 0 208)
+		(input)
+		(text "rand_lfsr[9..0]" (rect 0 0 56 12)(font "Arial" ))
+		(text "rand_lfsr[9..0]" (rect 21 203 77 215)(font "Arial" ))
+		(line (pt 0 208)(pt 16 208)(line_width 3))
+	)
+	(port
 		(pt 232 32)
 		(output)
 		(text "Ball_On" (rect 0 0 30 12)(font "Arial" ))
