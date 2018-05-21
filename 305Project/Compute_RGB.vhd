@@ -25,11 +25,11 @@ ARCHITECTURE behaviour OF Compute_RGB IS
 BEGIN
 
 			-- Colors for pixel data on video signal
-Red_Value <= NOT Ball_on when state = "01" else '1';
+Red_Value <= NOT Ball_on when (state = "01" or state = "10") else '1';
 
 		-- Turn off Green and Blue when displaying ball
-Green_Value <=	NOT (rom_mux_output OR Ball_Color) when state = "01" else NOT (rom_mux_output);
-Blue_Value <= NOT (Platform_On OR Ball_Color2) when state = "01" else '1';
+Green_Value <=	NOT (rom_mux_output OR Ball_Color) when (state = "01" or state = "10") else NOT (rom_mux_output);
+Blue_Value <= NOT (Platform_On OR Ball_Color2) when (state = "01" or state = "10") else '1';
 
 
 END architecture behaviour;

@@ -3,29 +3,41 @@ use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
 entity counter is
-generic (max : integer := 120);
 port (
-	Load	: in bit;
 	Enable : in bit;
 	Reset : in bit;
-	Init_time : in integer;
+	state : in std_logic_vector(1 downto 0);
 	clk : in bit;
-	Q_Out: 	out integer
+	Q_Out: 	out integer range 0 to 120
 	);
 end entity counter;
 
 architecture behaviour of counter is
-signal Reset2 : std_logic := '0';
+signal previous_state : std_logic_vector(1 downto 0);
 begin
 
-
-process(Enable,clk,Load,Reset2)
-variable v_output : integer := max;
+process(clk)
 begin
 	if (clk'event and clk = '1') then
+		previous_state <= state;
+	end if;
+end process;
+
+
+process(Enable,clk)
+variable v_output : integer range 0 to 120;
+begin
+
+		if (previous_state = "00" and state = "00") then
+			v_output := 0;
+		elsif (previous_state = "00" and state = "01") then
+			v_output := 120;
+		elsif (previous_state = "00" and state = "10") then
+			v_output := 20;
+	elsif (clk'event and clk = '1') then
 		if (Enable = '1') then
 			if (v_output = 0) then
-				v_output := max;
+				v_output := 0;
 			else 
 				v_output := v_output - 1;
 			end if;

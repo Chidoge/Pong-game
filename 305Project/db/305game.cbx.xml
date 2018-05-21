@@ -1,12 +1,12 @@
 <?xml version="1.0" ?>
 <LOG_ROOT>
 	<PROJECT NAME="305game">
-		<CBX_INST_ENTRY INSTANCE_NAME="|305game|Text_Drawer:inst10|lpm_divide:Div0" CBX_FILE_NAME="lpm_divide_jvo.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|305game|Text_Drawer:inst10|lpm_divide:Div2" CBX_FILE_NAME="lpm_divide_gvo.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|305game|Text_Drawer:inst10|lpm_divide:Div4" CBX_FILE_NAME="lpm_divide_gvo.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|305game|Text_Drawer:inst10|lpm_divide:Div0" CBX_FILE_NAME="lpm_divide_egm.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|305game|Text_Drawer:inst10|lpm_divide:Div2" CBX_FILE_NAME="lpm_divide_bgm.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|305game|Text_Drawer:inst10|lpm_divide:Div4" CBX_FILE_NAME="lpm_divide_fvo.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|305game|char_rom:inst9|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_kt91.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|305game|Text_Drawer:inst10|lpm_divide:Div1" CBX_FILE_NAME="lpm_divide_gvo.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|305game|Text_Drawer:inst10|lpm_divide:Div3" CBX_FILE_NAME="lpm_divide_jvo.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|305game|Text_Drawer:inst10|lpm_divide:Div5" CBX_FILE_NAME="lpm_divide_gvo.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|305game|Text_Drawer:inst10|lpm_divide:Div1" CBX_FILE_NAME="lpm_divide_fvo.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|305game|Text_Drawer:inst10|lpm_divide:Div3" CBX_FILE_NAME="lpm_divide_cgm.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|305game|Text_Drawer:inst10|lpm_divide:Div5" CBX_FILE_NAME="lpm_divide_9gm.tdf"/>
 	</PROJECT>
 </LOG_ROOT>

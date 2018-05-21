@@ -4,6 +4,7 @@ LIBRARY IEEE;
 USE IEEE.STD_LOGIC_1164.all;
 USE  IEEE.STD_LOGIC_ARITH.all;
 USE  IEEE.STD_LOGIC_UNSIGNED.all;
+use IEEE.NUMERIC_STD.ALL;
 LIBRARY lpm;
 USE lpm.lpm_components.ALL;
 
@@ -16,6 +17,7 @@ LIBRARY IEEE;
 USE IEEE.STD_LOGIC_1164.all;
 USE IEEE.STD_LOGIC_ARITH.all;
 USE IEEE.STD_LOGIC_SIGNED.all;
+use IEEE.NUMERIC_STD.ALL;
 LIBRARY work;
 USE work.de0core.all;
 
@@ -23,6 +25,7 @@ ENTITY ball IS
 Generic(ADDR_WIDTH: integer := 12; DATA_WIDTH: integer := 1);
 
    PORT(
+			signal level						:	in integer range 0 to 3;
 			signal reset						:	in std_logic;
 			signal vert_sync					:	in	std_logic;
 			signal PB2							:	in std_logic;
@@ -38,7 +41,7 @@ Generic(ADDR_WIDTH: integer := 12; DATA_WIDTH: integer := 1);
 			signal Ball_On						: out std_logic;
 			signal Ball_Color					: out std_logic;
 			signal Ball_Color2				: out std_logic;
-			signal score						: out integer
+			signal score						: out integer range 0 to 300
 			
 		  );		
 END ball;
@@ -52,12 +55,12 @@ SIGNAL Ball_Y_pos				 				: std_logic_vector(9 DOWNTO 0);
 signal Ball_On_Sig							: std_logic;
 
 -- Signal for score
-signal score_count : integer := 0;
-
+signal score_count : integer range 0 to 300 := 0;
+signal Ball_speed : integer range 0 to 12 := 4;
 BEGIN           
 
 score <= score_count;
-
+Ball_speed <= 4 * level;
 Ball_On <= Ball_On_Sig;
 
 
@@ -109,16 +112,16 @@ BEGIN
 	WAIT UNTIL vert_sync'event and vert_sync = '1';
 			-- Bounce off top or bottom of screen
 			IF ('0' & Ball_Y_pos) >= CONV_STD_LOGIC_VECTOR(480,11) - Size THEN 
-				Ball_Y_motion := - CONV_STD_LOGIC_VECTOR(4,10);
+				Ball_Y_motion := - CONV_STD_LOGIC_VECTOR(Ball_speed,10);
 			ELSIF Ball_Y_pos <= Size THEN
-				Ball_Y_motion := CONV_STD_LOGIC_VECTOR(4,10);
+				Ball_Y_motion := CONV_STD_LOGIC_VECTOR(Ball_speed,10);
 			END IF;
 			
 			
 			IF ("00" & Ball_X_Pos) >= CONV_STD_LOGIC_VECTOR(640,11) - Size THEN 
-				Ball_X_motion := - CONV_STD_LOGIC_VECTOR(4,10);
+				Ball_X_motion := - CONV_STD_LOGIC_VECTOR(Ball_speed,10);
 			ELSIF Ball_X_Pos <= Size THEN
-				Ball_X_motion := CONV_STD_LOGIC_VECTOR(4,10);
+				Ball_X_motion := CONV_STD_LOGIC_VECTOR(Ball_speed,10);
 			END IF;	
 			
 			-- If ball is caught, 460 is top of platform.

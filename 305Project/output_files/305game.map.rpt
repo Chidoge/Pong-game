@@ -1,5 +1,5 @@
 Analysis & Synthesis report for 305game
-Sun May 20 17:15:50 2018
+Mon May 21 19:53:53 2018
 Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
 
 
@@ -25,22 +25,21 @@ Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
  17. Source assignments for char_rom:inst9|altsyncram:altsyncram_component|altsyncram_kt91:auto_generated
  18. Parameter Settings for User Entity Instance: clk_divider:inst4
  19. Parameter Settings for User Entity Instance: ball:inst
- 20. Parameter Settings for User Entity Instance: LFSR:inst20
- 21. Parameter Settings for User Entity Instance: char_rom:inst9|altsyncram:altsyncram_component
- 22. Parameter Settings for User Entity Instance: counter:inst16
- 23. Parameter Settings for User Entity Instance: clk_divider:inst18
- 24. Parameter Settings for Inferred Entity Instance: Text_Drawer:inst10|lpm_divide:Div0
- 25. Parameter Settings for Inferred Entity Instance: Text_Drawer:inst10|lpm_divide:Div1
- 26. Parameter Settings for Inferred Entity Instance: Text_Drawer:inst10|lpm_divide:Div2
- 27. Parameter Settings for Inferred Entity Instance: Text_Drawer:inst10|lpm_divide:Div3
- 28. Parameter Settings for Inferred Entity Instance: Text_Drawer:inst10|lpm_divide:Div4
- 29. Parameter Settings for Inferred Entity Instance: Text_Drawer:inst10|lpm_divide:Div5
- 30. Parameter Settings for Inferred Entity Instance: Text_Drawer:inst10|lpm_mult:Mult0
- 31. Parameter Settings for Inferred Entity Instance: Text_Drawer:inst10|lpm_mult:Mult1
- 32. altsyncram Parameter Settings by Entity Instance
- 33. lpm_mult Parameter Settings by Entity Instance
- 34. Elapsed Time Per Partition
- 35. Analysis & Synthesis Messages
+ 20. Parameter Settings for User Entity Instance: clk_divider:inst18
+ 21. Parameter Settings for User Entity Instance: LFSR:inst20
+ 22. Parameter Settings for User Entity Instance: char_rom:inst9|altsyncram:altsyncram_component
+ 23. Parameter Settings for Inferred Entity Instance: Text_Drawer:inst10|lpm_divide:Div0
+ 24. Parameter Settings for Inferred Entity Instance: Text_Drawer:inst10|lpm_divide:Div1
+ 25. Parameter Settings for Inferred Entity Instance: Text_Drawer:inst10|lpm_divide:Div2
+ 26. Parameter Settings for Inferred Entity Instance: Text_Drawer:inst10|lpm_divide:Div3
+ 27. Parameter Settings for Inferred Entity Instance: Text_Drawer:inst10|lpm_divide:Div4
+ 28. Parameter Settings for Inferred Entity Instance: Text_Drawer:inst10|lpm_divide:Div5
+ 29. Parameter Settings for Inferred Entity Instance: Text_Drawer:inst10|lpm_mult:Mult0
+ 30. Parameter Settings for Inferred Entity Instance: Text_Drawer:inst10|lpm_mult:Mult1
+ 31. altsyncram Parameter Settings by Entity Instance
+ 32. lpm_mult Parameter Settings by Entity Instance
+ 33. Elapsed Time Per Partition
+ 34. Analysis & Synthesis Messages
 
 
 
@@ -66,16 +65,16 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun May 20 17:15:50 2018      ;
+; Analysis & Synthesis Status        ; Successful - Mon May 21 19:53:53 2018      ;
 ; Quartus II 64-Bit Version          ; 13.0.0 Build 156 04/24/2013 SJ Web Edition ;
 ; Revision Name                      ; 305game                                    ;
 ; Top-level Entity Name              ; 305game                                    ;
 ; Family                             ; Cyclone III                                ;
-; Total logic elements               ; 4,056                                      ;
-;     Total combinational functions  ; 4,001                                      ;
-;     Dedicated logic registers      ; 269                                        ;
-; Total registers                    ; 269                                        ;
-; Total pins                         ; 26                                         ;
+; Total logic elements               ; 1,217                                      ;
+;     Total combinational functions  ; 1,162                                      ;
+;     Dedicated logic registers      ; 228                                        ;
+; Total registers                    ; 228                                        ;
+; Total pins                         ; 20                                         ;
 ; Total virtual pins                 ; 0                                          ;
 ; Total memory bits                  ; 4,096                                      ;
 ; Embedded Multiplier 9-bit elements ; 0                                          ;
@@ -200,6 +199,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; platform.vhd                     ; yes             ; User VHDL File                         ; C:/Users/Lincoln/Desktop/305Project/305Project/platform.vhd                       ;         ;
 ; Text_Drawer.vhd                  ; yes             ; User VHDL File                         ; C:/Users/Lincoln/Desktop/305Project/305Project/Text_Drawer.vhd                    ;         ;
 ; counter_init.vhd                 ; yes             ; User VHDL File                         ; C:/Users/Lincoln/Desktop/305Project/305Project/counter_init.vhd                   ;         ;
+; level_generator.vhd              ; yes             ; User VHDL File                         ; C:/Users/Lincoln/Desktop/305Project/305Project/level_generator.vhd                ;         ;
 ; altsyncram.tdf                   ; yes             ; Megafunction                           ; f:/program files/quartus ii/quartus/libraries/megafunctions/altsyncram.tdf        ;         ;
 ; stratix_ram_block.inc            ; yes             ; Megafunction                           ; f:/program files/quartus ii/quartus/libraries/megafunctions/stratix_ram_block.inc ;         ;
 ; lpm_mux.inc                      ; yes             ; Megafunction                           ; f:/program files/quartus ii/quartus/libraries/megafunctions/lpm_mux.inc           ;         ;
@@ -214,17 +214,25 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; lpm_divide.tdf                   ; yes             ; Megafunction                           ; f:/program files/quartus ii/quartus/libraries/megafunctions/lpm_divide.tdf        ;         ;
 ; abs_divider.inc                  ; yes             ; Megafunction                           ; f:/program files/quartus ii/quartus/libraries/megafunctions/abs_divider.inc       ;         ;
 ; sign_div_unsign.inc              ; yes             ; Megafunction                           ; f:/program files/quartus ii/quartus/libraries/megafunctions/sign_div_unsign.inc   ;         ;
-; db/lpm_divide_jvo.tdf            ; yes             ; Auto-Generated Megafunction            ; C:/Users/Lincoln/Desktop/305Project/305Project/db/lpm_divide_jvo.tdf              ;         ;
-; db/abs_divider_nbg.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/Lincoln/Desktop/305Project/305Project/db/abs_divider_nbg.tdf             ;         ;
-; db/alt_u_div_36f.tdf             ; yes             ; Auto-Generated Megafunction            ; C:/Users/Lincoln/Desktop/305Project/305Project/db/alt_u_div_36f.tdf               ;         ;
+; db/lpm_divide_egm.tdf            ; yes             ; Auto-Generated Megafunction            ; C:/Users/Lincoln/Desktop/305Project/305Project/db/lpm_divide_egm.tdf              ;         ;
+; db/sign_div_unsign_fkh.tdf       ; yes             ; Auto-Generated Megafunction            ; C:/Users/Lincoln/Desktop/305Project/305Project/db/sign_div_unsign_fkh.tdf         ;         ;
+; db/alt_u_div_93f.tdf             ; yes             ; Auto-Generated Megafunction            ; C:/Users/Lincoln/Desktop/305Project/305Project/db/alt_u_div_93f.tdf               ;         ;
 ; db/add_sub_unc.tdf               ; yes             ; Auto-Generated Megafunction            ; C:/Users/Lincoln/Desktop/305Project/305Project/db/add_sub_unc.tdf                 ;         ;
 ; db/add_sub_vnc.tdf               ; yes             ; Auto-Generated Megafunction            ; C:/Users/Lincoln/Desktop/305Project/305Project/db/add_sub_vnc.tdf                 ;         ;
-; db/lpm_abs_st9.tdf               ; yes             ; Auto-Generated Megafunction            ; C:/Users/Lincoln/Desktop/305Project/305Project/db/lpm_abs_st9.tdf                 ;         ;
-; db/lpm_abs_9v9.tdf               ; yes             ; Auto-Generated Megafunction            ; C:/Users/Lincoln/Desktop/305Project/305Project/db/lpm_abs_9v9.tdf                 ;         ;
-; db/lpm_divide_gvo.tdf            ; yes             ; Auto-Generated Megafunction            ; C:/Users/Lincoln/Desktop/305Project/305Project/db/lpm_divide_gvo.tdf              ;         ;
-; db/abs_divider_kbg.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/Lincoln/Desktop/305Project/305Project/db/abs_divider_kbg.tdf             ;         ;
-; db/alt_u_div_t5f.tdf             ; yes             ; Auto-Generated Megafunction            ; C:/Users/Lincoln/Desktop/305Project/305Project/db/alt_u_div_t5f.tdf               ;         ;
+; db/lpm_divide_fvo.tdf            ; yes             ; Auto-Generated Megafunction            ; C:/Users/Lincoln/Desktop/305Project/305Project/db/lpm_divide_fvo.tdf              ;         ;
+; db/abs_divider_jbg.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/Lincoln/Desktop/305Project/305Project/db/abs_divider_jbg.tdf             ;         ;
+; db/alt_u_div_r5f.tdf             ; yes             ; Auto-Generated Megafunction            ; C:/Users/Lincoln/Desktop/305Project/305Project/db/alt_u_div_r5f.tdf               ;         ;
 ; db/lpm_abs_pt9.tdf               ; yes             ; Auto-Generated Megafunction            ; C:/Users/Lincoln/Desktop/305Project/305Project/db/lpm_abs_pt9.tdf                 ;         ;
+; db/lpm_abs_8v9.tdf               ; yes             ; Auto-Generated Megafunction            ; C:/Users/Lincoln/Desktop/305Project/305Project/db/lpm_abs_8v9.tdf                 ;         ;
+; db/lpm_divide_bgm.tdf            ; yes             ; Auto-Generated Megafunction            ; C:/Users/Lincoln/Desktop/305Project/305Project/db/lpm_divide_bgm.tdf              ;         ;
+; db/sign_div_unsign_ckh.tdf       ; yes             ; Auto-Generated Megafunction            ; C:/Users/Lincoln/Desktop/305Project/305Project/db/sign_div_unsign_ckh.tdf         ;         ;
+; db/alt_u_div_33f.tdf             ; yes             ; Auto-Generated Megafunction            ; C:/Users/Lincoln/Desktop/305Project/305Project/db/alt_u_div_33f.tdf               ;         ;
+; db/lpm_divide_cgm.tdf            ; yes             ; Auto-Generated Megafunction            ; C:/Users/Lincoln/Desktop/305Project/305Project/db/lpm_divide_cgm.tdf              ;         ;
+; db/sign_div_unsign_dkh.tdf       ; yes             ; Auto-Generated Megafunction            ; C:/Users/Lincoln/Desktop/305Project/305Project/db/sign_div_unsign_dkh.tdf         ;         ;
+; db/alt_u_div_53f.tdf             ; yes             ; Auto-Generated Megafunction            ; C:/Users/Lincoln/Desktop/305Project/305Project/db/alt_u_div_53f.tdf               ;         ;
+; db/lpm_divide_9gm.tdf            ; yes             ; Auto-Generated Megafunction            ; C:/Users/Lincoln/Desktop/305Project/305Project/db/lpm_divide_9gm.tdf              ;         ;
+; db/sign_div_unsign_akh.tdf       ; yes             ; Auto-Generated Megafunction            ; C:/Users/Lincoln/Desktop/305Project/305Project/db/sign_div_unsign_akh.tdf         ;         ;
+; db/alt_u_div_v2f.tdf             ; yes             ; Auto-Generated Megafunction            ; C:/Users/Lincoln/Desktop/305Project/305Project/db/alt_u_div_v2f.tdf               ;         ;
 ; lpm_mult.tdf                     ; yes             ; Megafunction                           ; f:/program files/quartus ii/quartus/libraries/megafunctions/lpm_mult.tdf          ;         ;
 ; lpm_add_sub.inc                  ; yes             ; Megafunction                           ; f:/program files/quartus ii/quartus/libraries/megafunctions/lpm_add_sub.inc       ;         ;
 ; multcore.inc                     ; yes             ; Megafunction                           ; f:/program files/quartus ii/quartus/libraries/megafunctions/multcore.inc          ;         ;
@@ -244,93 +252,88 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------------+-----------------+----------------------------------------+-----------------------------------------------------------------------------------+---------+
 
 
-+-------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                             ;
-+---------------------------------------------+---------------------------+
-; Resource                                    ; Usage                     ;
-+---------------------------------------------+---------------------------+
-; Estimated Total logic elements              ; 4,056                     ;
-;                                             ;                           ;
-; Total combinational functions               ; 4001                      ;
-; Logic element usage by number of LUT inputs ;                           ;
-;     -- 4 input functions                    ; 1193                      ;
-;     -- 3 input functions                    ; 1173                      ;
-;     -- <=2 input functions                  ; 1635                      ;
-;                                             ;                           ;
-; Logic elements by mode                      ;                           ;
-;     -- normal mode                          ; 2740                      ;
-;     -- arithmetic mode                      ; 1261                      ;
-;                                             ;                           ;
-; Total registers                             ; 269                       ;
-;     -- Dedicated logic registers            ; 269                       ;
-;     -- I/O registers                        ; 0                         ;
-;                                             ;                           ;
-; I/O pins                                    ; 26                        ;
-; Total memory bits                           ; 4096                      ;
-; Embedded Multiplier 9-bit elements          ; 0                         ;
-; Maximum fan-out node                        ; ball:inst|score_count[31] ;
-; Maximum fan-out                             ; 113                       ;
-; Total fan-out                               ; 12139                     ;
-; Average fan-out                             ; 2.80                      ;
-+---------------------------------------------+---------------------------+
++---------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                     ;
++---------------------------------------------+-----------------------------------+
+; Resource                                    ; Usage                             ;
++---------------------------------------------+-----------------------------------+
+; Estimated Total logic elements              ; 1,217                             ;
+;                                             ;                                   ;
+; Total combinational functions               ; 1162                              ;
+; Logic element usage by number of LUT inputs ;                                   ;
+;     -- 4 input functions                    ; 357                               ;
+;     -- 3 input functions                    ; 362                               ;
+;     -- <=2 input functions                  ; 443                               ;
+;                                             ;                                   ;
+; Logic elements by mode                      ;                                   ;
+;     -- normal mode                          ; 779                               ;
+;     -- arithmetic mode                      ; 383                               ;
+;                                             ;                                   ;
+; Total registers                             ; 228                               ;
+;     -- Dedicated logic registers            ; 228                               ;
+;     -- I/O registers                        ; 0                                 ;
+;                                             ;                                   ;
+; I/O pins                                    ; 20                                ;
+; Total memory bits                           ; 4096                              ;
+; Embedded Multiplier 9-bit elements          ; 0                                 ;
+; Maximum fan-out node                        ; clk_divider:inst4|clk_out_hz_temp ;
+; Maximum fan-out                             ; 98                                ;
+; Total fan-out                               ; 4094                              ;
+; Average fan-out                             ; 2.84                              ;
++---------------------------------------------+-----------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                             ;
-+-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------+--------------+
-; Compilation Hierarchy Node                ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                      ; Library Name ;
-+-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------+--------------+
-; |305game                                  ; 4001 (1)          ; 269 (0)      ; 4096        ; 0            ; 0       ; 0         ; 26   ; 0            ; |305game                                                                                                                 ;              ;
-;    |LFSR:inst20|                          ; 8 (8)             ; 10 (10)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |305game|LFSR:inst20                                                                                                     ;              ;
-;    |MOUSE:inst5|                          ; 81 (81)           ; 88 (88)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |305game|MOUSE:inst5                                                                                                     ;              ;
-;    |State_controller:inst7|               ; 7 (7)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |305game|State_controller:inst7                                                                                          ;              ;
-;    |Text_Drawer:inst10|                   ; 3477 (264)        ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |305game|Text_Drawer:inst10                                                                                              ;              ;
-;       |lpm_divide:Div0|                   ; 652 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |305game|Text_Drawer:inst10|lpm_divide:Div0                                                                              ;              ;
-;          |lpm_divide_jvo:auto_generated|  ; 652 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |305game|Text_Drawer:inst10|lpm_divide:Div0|lpm_divide_jvo:auto_generated                                                ;              ;
-;             |abs_divider_nbg:divider|     ; 652 (8)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |305game|Text_Drawer:inst10|lpm_divide:Div0|lpm_divide_jvo:auto_generated|abs_divider_nbg:divider                        ;              ;
-;                |alt_u_div_36f:divider|    ; 601 (601)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |305game|Text_Drawer:inst10|lpm_divide:Div0|lpm_divide_jvo:auto_generated|abs_divider_nbg:divider|alt_u_div_36f:divider  ;              ;
-;                |lpm_abs_9v9:my_abs_num|   ; 43 (43)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |305game|Text_Drawer:inst10|lpm_divide:Div0|lpm_divide_jvo:auto_generated|abs_divider_nbg:divider|lpm_abs_9v9:my_abs_num ;              ;
-;       |lpm_divide:Div1|                   ; 498 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |305game|Text_Drawer:inst10|lpm_divide:Div1                                                                              ;              ;
-;          |lpm_divide_gvo:auto_generated|  ; 498 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |305game|Text_Drawer:inst10|lpm_divide:Div1|lpm_divide_gvo:auto_generated                                                ;              ;
-;             |abs_divider_kbg:divider|     ; 498 (6)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |305game|Text_Drawer:inst10|lpm_divide:Div1|lpm_divide_gvo:auto_generated|abs_divider_kbg:divider                        ;              ;
-;                |alt_u_div_t5f:divider|    ; 449 (449)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |305game|Text_Drawer:inst10|lpm_divide:Div1|lpm_divide_gvo:auto_generated|abs_divider_kbg:divider|alt_u_div_t5f:divider  ;              ;
-;                |lpm_abs_9v9:my_abs_num|   ; 43 (43)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |305game|Text_Drawer:inst10|lpm_divide:Div1|lpm_divide_gvo:auto_generated|abs_divider_kbg:divider|lpm_abs_9v9:my_abs_num ;              ;
-;       |lpm_divide:Div2|                   ; 458 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |305game|Text_Drawer:inst10|lpm_divide:Div2                                                                              ;              ;
-;          |lpm_divide_gvo:auto_generated|  ; 458 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |305game|Text_Drawer:inst10|lpm_divide:Div2|lpm_divide_gvo:auto_generated                                                ;              ;
-;             |abs_divider_kbg:divider|     ; 458 (7)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |305game|Text_Drawer:inst10|lpm_divide:Div2|lpm_divide_gvo:auto_generated|abs_divider_kbg:divider                        ;              ;
-;                |alt_u_div_t5f:divider|    ; 449 (449)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |305game|Text_Drawer:inst10|lpm_divide:Div2|lpm_divide_gvo:auto_generated|abs_divider_kbg:divider|alt_u_div_t5f:divider  ;              ;
-;                |lpm_abs_9v9:my_abs_num|   ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |305game|Text_Drawer:inst10|lpm_divide:Div2|lpm_divide_gvo:auto_generated|abs_divider_kbg:divider|lpm_abs_9v9:my_abs_num ;              ;
-;       |lpm_divide:Div3|                   ; 637 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |305game|Text_Drawer:inst10|lpm_divide:Div3                                                                              ;              ;
-;          |lpm_divide_jvo:auto_generated|  ; 637 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |305game|Text_Drawer:inst10|lpm_divide:Div3|lpm_divide_jvo:auto_generated                                                ;              ;
-;             |abs_divider_nbg:divider|     ; 637 (8)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |305game|Text_Drawer:inst10|lpm_divide:Div3|lpm_divide_jvo:auto_generated|abs_divider_nbg:divider                        ;              ;
-;                |alt_u_div_36f:divider|    ; 586 (586)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |305game|Text_Drawer:inst10|lpm_divide:Div3|lpm_divide_jvo:auto_generated|abs_divider_nbg:divider|alt_u_div_36f:divider  ;              ;
-;                |lpm_abs_9v9:my_abs_num|   ; 43 (43)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |305game|Text_Drawer:inst10|lpm_divide:Div3|lpm_divide_jvo:auto_generated|abs_divider_nbg:divider|lpm_abs_9v9:my_abs_num ;              ;
-;       |lpm_divide:Div4|                   ; 498 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |305game|Text_Drawer:inst10|lpm_divide:Div4                                                                              ;              ;
-;          |lpm_divide_gvo:auto_generated|  ; 498 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |305game|Text_Drawer:inst10|lpm_divide:Div4|lpm_divide_gvo:auto_generated                                                ;              ;
-;             |abs_divider_kbg:divider|     ; 498 (6)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |305game|Text_Drawer:inst10|lpm_divide:Div4|lpm_divide_gvo:auto_generated|abs_divider_kbg:divider                        ;              ;
-;                |alt_u_div_t5f:divider|    ; 449 (449)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |305game|Text_Drawer:inst10|lpm_divide:Div4|lpm_divide_gvo:auto_generated|abs_divider_kbg:divider|alt_u_div_t5f:divider  ;              ;
-;                |lpm_abs_9v9:my_abs_num|   ; 43 (43)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |305game|Text_Drawer:inst10|lpm_divide:Div4|lpm_divide_gvo:auto_generated|abs_divider_kbg:divider|lpm_abs_9v9:my_abs_num ;              ;
-;       |lpm_divide:Div5|                   ; 458 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |305game|Text_Drawer:inst10|lpm_divide:Div5                                                                              ;              ;
-;          |lpm_divide_gvo:auto_generated|  ; 458 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |305game|Text_Drawer:inst10|lpm_divide:Div5|lpm_divide_gvo:auto_generated                                                ;              ;
-;             |abs_divider_kbg:divider|     ; 458 (7)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |305game|Text_Drawer:inst10|lpm_divide:Div5|lpm_divide_gvo:auto_generated|abs_divider_kbg:divider                        ;              ;
-;                |alt_u_div_t5f:divider|    ; 449 (449)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |305game|Text_Drawer:inst10|lpm_divide:Div5|lpm_divide_gvo:auto_generated|abs_divider_kbg:divider|alt_u_div_t5f:divider  ;              ;
-;                |lpm_abs_9v9:my_abs_num|   ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |305game|Text_Drawer:inst10|lpm_divide:Div5|lpm_divide_gvo:auto_generated|abs_divider_kbg:divider|lpm_abs_9v9:my_abs_num ;              ;
-;       |lpm_mult:Mult0|                    ; 6 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |305game|Text_Drawer:inst10|lpm_mult:Mult0                                                                               ;              ;
-;          |multcore:mult_core|             ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |305game|Text_Drawer:inst10|lpm_mult:Mult0|multcore:mult_core                                                            ;              ;
-;       |lpm_mult:Mult1|                    ; 6 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |305game|Text_Drawer:inst10|lpm_mult:Mult1                                                                               ;              ;
-;          |multcore:mult_core|             ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |305game|Text_Drawer:inst10|lpm_mult:Mult1|multcore:mult_core                                                            ;              ;
-;    |VGA_SYNC:inst1|                       ; 62 (62)           ; 48 (48)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |305game|VGA_SYNC:inst1                                                                                                  ;              ;
-;    |ball:inst|                            ; 185 (185)         ; 54 (54)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |305game|ball:inst                                                                                                       ;              ;
-;    |char_rom:inst9|                       ; 4 (4)             ; 0 (0)        ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |305game|char_rom:inst9                                                                                                  ;              ;
-;       |altsyncram:altsyncram_component|   ; 0 (0)             ; 0 (0)        ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |305game|char_rom:inst9|altsyncram:altsyncram_component                                                                  ;              ;
-;          |altsyncram_kt91:auto_generated| ; 0 (0)             ; 0 (0)        ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |305game|char_rom:inst9|altsyncram:altsyncram_component|altsyncram_kt91:auto_generated                                   ;              ;
-;    |clk_divider:inst18|                   ; 42 (42)           ; 33 (33)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |305game|clk_divider:inst18                                                                                              ;              ;
-;    |clk_divider:inst4|                    ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |305game|clk_divider:inst4                                                                                               ;              ;
-;    |counter:inst16|                       ; 75 (75)           ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |305game|counter:inst16                                                                                                  ;              ;
-;    |platform:inst8|                       ; 44 (44)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |305game|platform:inst8                                                                                                  ;              ;
-;    |seven_seg:inst2|                      ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |305game|seven_seg:inst2                                                                                                 ;              ;
-;    |seven_seg:inst3|                      ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |305game|seven_seg:inst3                                                                                                 ;              ;
-+-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------+--------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                ;
++-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                         ; Library Name ;
++-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------+--------------+
+; |305game                                  ; 1162 (1)          ; 228 (0)      ; 4096        ; 0            ; 0       ; 0         ; 20   ; 0            ; |305game                                                                                                                    ;              ;
+;    |Compute_RGB:inst11|                   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |305game|Compute_RGB:inst11                                                                                                 ;              ;
+;    |LFSR:inst20|                          ; 8 (8)             ; 10 (10)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |305game|LFSR:inst20                                                                                                        ;              ;
+;    |MOUSE:inst5|                          ; 81 (81)           ; 88 (88)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |305game|MOUSE:inst5                                                                                                        ;              ;
+;    |State_controller:inst7|               ; 11 (11)           ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |305game|State_controller:inst7                                                                                             ;              ;
+;    |Text_Drawer:inst10|                   ; 685 (209)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |305game|Text_Drawer:inst10                                                                                                 ;              ;
+;       |lpm_divide:Div0|                   ; 44 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |305game|Text_Drawer:inst10|lpm_divide:Div0                                                                                 ;              ;
+;          |lpm_divide_egm:auto_generated|  ; 44 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |305game|Text_Drawer:inst10|lpm_divide:Div0|lpm_divide_egm:auto_generated                                                   ;              ;
+;             |sign_div_unsign_fkh:divider| ; 44 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |305game|Text_Drawer:inst10|lpm_divide:Div0|lpm_divide_egm:auto_generated|sign_div_unsign_fkh:divider                       ;              ;
+;                |alt_u_div_93f:divider|    ; 44 (44)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |305game|Text_Drawer:inst10|lpm_divide:Div0|lpm_divide_egm:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_93f:divider ;              ;
+;       |lpm_divide:Div1|                   ; 155 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |305game|Text_Drawer:inst10|lpm_divide:Div1                                                                                 ;              ;
+;          |lpm_divide_fvo:auto_generated|  ; 155 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |305game|Text_Drawer:inst10|lpm_divide:Div1|lpm_divide_fvo:auto_generated                                                   ;              ;
+;             |abs_divider_jbg:divider|     ; 155 (6)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |305game|Text_Drawer:inst10|lpm_divide:Div1|lpm_divide_fvo:auto_generated|abs_divider_jbg:divider                           ;              ;
+;                |alt_u_div_r5f:divider|    ; 132 (132)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |305game|Text_Drawer:inst10|lpm_divide:Div1|lpm_divide_fvo:auto_generated|abs_divider_jbg:divider|alt_u_div_r5f:divider     ;              ;
+;                |lpm_abs_8v9:my_abs_num|   ; 17 (17)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |305game|Text_Drawer:inst10|lpm_divide:Div1|lpm_divide_fvo:auto_generated|abs_divider_jbg:divider|lpm_abs_8v9:my_abs_num    ;              ;
+;       |lpm_divide:Div2|                   ; 69 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |305game|Text_Drawer:inst10|lpm_divide:Div2                                                                                 ;              ;
+;          |lpm_divide_bgm:auto_generated|  ; 69 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |305game|Text_Drawer:inst10|lpm_divide:Div2|lpm_divide_bgm:auto_generated                                                   ;              ;
+;             |sign_div_unsign_ckh:divider| ; 69 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |305game|Text_Drawer:inst10|lpm_divide:Div2|lpm_divide_bgm:auto_generated|sign_div_unsign_ckh:divider                       ;              ;
+;                |alt_u_div_33f:divider|    ; 69 (69)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |305game|Text_Drawer:inst10|lpm_divide:Div2|lpm_divide_bgm:auto_generated|sign_div_unsign_ckh:divider|alt_u_div_33f:divider ;              ;
+;       |lpm_divide:Div3|                   ; 6 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |305game|Text_Drawer:inst10|lpm_divide:Div3                                                                                 ;              ;
+;          |lpm_divide_cgm:auto_generated|  ; 6 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |305game|Text_Drawer:inst10|lpm_divide:Div3|lpm_divide_cgm:auto_generated                                                   ;              ;
+;             |sign_div_unsign_dkh:divider| ; 6 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |305game|Text_Drawer:inst10|lpm_divide:Div3|lpm_divide_cgm:auto_generated|sign_div_unsign_dkh:divider                       ;              ;
+;                |alt_u_div_53f:divider|    ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |305game|Text_Drawer:inst10|lpm_divide:Div3|lpm_divide_cgm:auto_generated|sign_div_unsign_dkh:divider|alt_u_div_53f:divider ;              ;
+;       |lpm_divide:Div4|                   ; 155 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |305game|Text_Drawer:inst10|lpm_divide:Div4                                                                                 ;              ;
+;          |lpm_divide_fvo:auto_generated|  ; 155 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |305game|Text_Drawer:inst10|lpm_divide:Div4|lpm_divide_fvo:auto_generated                                                   ;              ;
+;             |abs_divider_jbg:divider|     ; 155 (6)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |305game|Text_Drawer:inst10|lpm_divide:Div4|lpm_divide_fvo:auto_generated|abs_divider_jbg:divider                           ;              ;
+;                |alt_u_div_r5f:divider|    ; 132 (132)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |305game|Text_Drawer:inst10|lpm_divide:Div4|lpm_divide_fvo:auto_generated|abs_divider_jbg:divider|alt_u_div_r5f:divider     ;              ;
+;                |lpm_abs_8v9:my_abs_num|   ; 17 (17)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |305game|Text_Drawer:inst10|lpm_divide:Div4|lpm_divide_fvo:auto_generated|abs_divider_jbg:divider|lpm_abs_8v9:my_abs_num    ;              ;
+;       |lpm_divide:Div5|                   ; 43 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |305game|Text_Drawer:inst10|lpm_divide:Div5                                                                                 ;              ;
+;          |lpm_divide_9gm:auto_generated|  ; 43 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |305game|Text_Drawer:inst10|lpm_divide:Div5|lpm_divide_9gm:auto_generated                                                   ;              ;
+;             |sign_div_unsign_akh:divider| ; 43 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |305game|Text_Drawer:inst10|lpm_divide:Div5|lpm_divide_9gm:auto_generated|sign_div_unsign_akh:divider                       ;              ;
+;                |alt_u_div_v2f:divider|    ; 43 (43)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |305game|Text_Drawer:inst10|lpm_divide:Div5|lpm_divide_9gm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_v2f:divider ;              ;
+;       |lpm_mult:Mult0|                    ; 4 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |305game|Text_Drawer:inst10|lpm_mult:Mult0                                                                                  ;              ;
+;          |multcore:mult_core|             ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |305game|Text_Drawer:inst10|lpm_mult:Mult0|multcore:mult_core                                                               ;              ;
+;    |VGA_SYNC:inst1|                       ; 62 (62)           ; 48 (48)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |305game|VGA_SYNC:inst1                                                                                                     ;              ;
+;    |ball:inst|                            ; 168 (168)         ; 35 (35)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |305game|ball:inst                                                                                                          ;              ;
+;    |char_rom:inst9|                       ; 4 (4)             ; 0 (0)        ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |305game|char_rom:inst9                                                                                                     ;              ;
+;       |altsyncram:altsyncram_component|   ; 0 (0)             ; 0 (0)        ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |305game|char_rom:inst9|altsyncram:altsyncram_component                                                                     ;              ;
+;          |altsyncram_kt91:auto_generated| ; 0 (0)             ; 0 (0)        ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |305game|char_rom:inst9|altsyncram:altsyncram_component|altsyncram_kt91:auto_generated                                      ;              ;
+;    |clk_divider:inst18|                   ; 42 (42)           ; 33 (33)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |305game|clk_divider:inst18                                                                                                 ;              ;
+;    |clk_divider:inst4|                    ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |305game|clk_divider:inst4                                                                                                  ;              ;
+;    |counter:inst16|                       ; 37 (37)           ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |305game|counter:inst16                                                                                                     ;              ;
+;    |level_generator:inst12|               ; 14 (14)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |305game|level_generator:inst12                                                                                             ;              ;
+;    |platform:inst8|                       ; 44 (44)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |305game|platform:inst8                                                                                                     ;              ;
+;    |seven_seg:inst3|                      ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |305game|seven_seg:inst3                                                                                                    ;              ;
++-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -359,39 +362,39 @@ Encoding Type:  One-Hot
 
 
 Encoding Type:  One-Hot
-+----------------------------------------------------+
-; State Machine - |305game|State_controller:inst7|CS ;
-+-------------+-------------+---------+--------------+
-; Name        ; CS.training ; CS.game ; CS.menu      ;
-+-------------+-------------+---------+--------------+
-; CS.menu     ; 0           ; 0       ; 0            ;
-; CS.game     ; 0           ; 1       ; 1            ;
-; CS.training ; 1           ; 0       ; 1            ;
-+-------------+-------------+---------+--------------+
++---------------------------------------------------------------+
+; State Machine - |305game|State_controller:inst7|CS            ;
++--------------+--------------+-------------+---------+---------+
+; Name         ; CS.game_over ; CS.training ; CS.game ; CS.menu ;
++--------------+--------------+-------------+---------+---------+
+; CS.menu      ; 0            ; 0           ; 0       ; 0       ;
+; CS.game      ; 0            ; 0           ; 1       ; 1       ;
+; CS.training  ; 0            ; 1           ; 0       ; 1       ;
+; CS.game_over ; 1            ; 0           ; 0       ; 1       ;
++--------------+--------------+-------------+---------+---------+
 
 
-+-------------------------------------------------------------------------------------------------------------------+
-; User-Specified and Inferred Latches                                                                               ;
-+-----------------------------------------------------+------------------------------------+------------------------+
-; Latch Name                                          ; Latch Enable Signal                ; Free of Timing Hazards ;
-+-----------------------------------------------------+------------------------------------+------------------------+
-; Text_Drawer:inst10|font_col[1]                      ; Text_Drawer:inst10|font_row[2]     ; yes                    ;
-; Text_Drawer:inst10|font_col[0]                      ; Text_Drawer:inst10|font_row[2]     ; yes                    ;
-; Text_Drawer:inst10|font_col[2]                      ; Text_Drawer:inst10|font_row[2]     ; yes                    ;
-; State_controller:inst7|NS.game_65                   ; State_controller:inst7|CS.game     ; yes                    ;
-; Text_Drawer:inst10|font_row[0]                      ; Text_Drawer:inst10|font_row[2]     ; yes                    ;
-; Text_Drawer:inst10|font_row[1]                      ; Text_Drawer:inst10|font_row[2]     ; yes                    ;
-; Text_Drawer:inst10|font_row[2]                      ; Text_Drawer:inst10|font_row[2]     ; yes                    ;
-; Text_Drawer:inst10|char_adr[0]                      ; State_controller:inst7|CS.training ; yes                    ;
-; Text_Drawer:inst10|char_adr[1]                      ; State_controller:inst7|CS.training ; yes                    ;
-; Text_Drawer:inst10|char_adr[2]                      ; State_controller:inst7|CS.training ; yes                    ;
-; Text_Drawer:inst10|char_adr[3]                      ; State_controller:inst7|CS.training ; yes                    ;
-; Text_Drawer:inst10|char_adr[4]                      ; State_controller:inst7|CS.training ; yes                    ;
-; Text_Drawer:inst10|char_adr[5]                      ; State_controller:inst7|CS.training ; yes                    ;
-; State_controller:inst7|NS.menu_73                   ; State_controller:inst7|CS.game     ; yes                    ;
-; State_controller:inst7|NS.training_57               ; State_controller:inst7|CS.game     ; yes                    ;
-; Number of user-specified and inferred latches = 15  ;                                    ;                        ;
-+-----------------------------------------------------+------------------------------------+------------------------+
++---------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                           ;
++-----------------------------------------------------+--------------------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal            ; Free of Timing Hazards ;
++-----------------------------------------------------+--------------------------------+------------------------+
+; Text_Drawer:inst10|font_col[1]                      ; Text_Drawer:inst10|font_row[2] ; yes                    ;
+; Text_Drawer:inst10|font_col[0]                      ; Text_Drawer:inst10|font_row[2] ; yes                    ;
+; Text_Drawer:inst10|font_col[2]                      ; Text_Drawer:inst10|font_row[2] ; yes                    ;
+; level_generator:inst12|level[1]                     ; level_generator:inst12|Mux3    ; yes                    ;
+; level_generator:inst12|level[0]                     ; level_generator:inst12|Mux3    ; yes                    ;
+; Text_Drawer:inst10|font_row[0]                      ; Text_Drawer:inst10|font_row[2] ; yes                    ;
+; Text_Drawer:inst10|font_row[1]                      ; Text_Drawer:inst10|font_row[2] ; yes                    ;
+; Text_Drawer:inst10|font_row[2]                      ; Text_Drawer:inst10|font_row[2] ; yes                    ;
+; Text_Drawer:inst10|char_adr[0]                      ; Text_Drawer:inst10|char_adr[5] ; yes                    ;
+; Text_Drawer:inst10|char_adr[1]                      ; Text_Drawer:inst10|char_adr[5] ; yes                    ;
+; Text_Drawer:inst10|char_adr[2]                      ; Text_Drawer:inst10|char_adr[5] ; yes                    ;
+; Text_Drawer:inst10|char_adr[3]                      ; Text_Drawer:inst10|char_adr[5] ; yes                    ;
+; Text_Drawer:inst10|char_adr[4]                      ; Text_Drawer:inst10|char_adr[5] ; yes                    ;
+; Text_Drawer:inst10|char_adr[5]                      ; Text_Drawer:inst10|char_adr[5] ; yes                    ;
+; Number of user-specified and inferred latches = 14  ;                                ;                        ;
++-----------------------------------------------------+--------------------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
@@ -407,18 +410,16 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; MOUSE:inst5|CHAROUT[0,1]                  ; Stuck at GND due to stuck port data_in            ;
 ; MOUSE:inst5|SHIFTOUT[10]                  ; Stuck at VCC due to stuck port data_in            ;
 ; ball:inst|\Move_Ball:Ball_X_motion[1]     ; Merged with ball:inst|\Move_Ball:Ball_X_motion[0] ;
-; ball:inst|\Move_Ball:Ball_X_motion[4..9]  ; Merged with ball:inst|\Move_Ball:Ball_X_motion[3] ;
 ; ball:inst|\Move_Ball:Ball_Y_motion[1]     ; Merged with ball:inst|\Move_Ball:Ball_Y_motion[0] ;
-; ball:inst|\Move_Ball:Ball_Y_motion[4..9]  ; Merged with ball:inst|\Move_Ball:Ball_Y_motion[3] ;
+; ball:inst|\Move_Ball:Ball_X_motion[5..9]  ; Merged with ball:inst|\Move_Ball:Ball_X_motion[4] ;
+; ball:inst|\Move_Ball:Ball_Y_motion[5..9]  ; Merged with ball:inst|\Move_Ball:Ball_Y_motion[4] ;
 ; ball:inst|\Move_Ball:Ball_X_motion[0]     ; Stuck at GND due to stuck port data_in            ;
 ; ball:inst|\Move_Ball:Ball_Y_motion[0]     ; Stuck at GND due to stuck port data_in            ;
 ; ball:inst|Ball_Y_pos[0,1]                 ; Stuck at GND due to stuck port data_in            ;
 ; clk_divider:inst4|clk_out_hz_count[31]    ; Stuck at GND due to stuck port data_in            ;
 ; clk_divider:inst4|clk_out_hz_count[0..30] ; Lost fanout                                       ;
 ; VGA_SYNC:inst1|pixel_row[9]               ; Stuck at GND due to stuck port data_in            ;
-; ball:inst|\Move_Ball:Ball_Y_motion[2]     ; Stuck at VCC due to stuck port data_in            ;
-; ball:inst|\Move_Ball:Ball_X_motion[2]     ; Stuck at VCC due to stuck port data_in            ;
-; Total Number of Removed Registers = 63    ;                                                   ;
+; Total Number of Removed Registers = 59    ;                                                   ;
 +-------------------------------------------+---------------------------------------------------+
 
 
@@ -437,12 +438,12 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 269   ;
-; Number of registers using Synchronous Clear  ; 82    ;
-; Number of registers using Synchronous Load   ; 10    ;
-; Number of registers using Asynchronous Clear ; 16    ;
+; Total registers                              ; 228   ;
+; Number of registers using Synchronous Clear  ; 55    ;
+; Number of registers using Synchronous Load   ; 16    ;
+; Number of registers using Asynchronous Clear ; 23    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 167   ;
+; Number of registers using Clock Enable       ; 119   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -452,23 +453,19 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +-----------------------------------------+---------+
 ; Inverted Register                       ; Fan out ;
 +-----------------------------------------+---------+
-; LFSR:inst20|rand_lfsr[7]                ; 5       ;
+; LFSR:inst20|rand_lfsr[7]                ; 4       ;
 ; LFSR:inst20|rand_lfsr[0]                ; 6       ;
 ; LFSR:inst20|rand_lfsr[2]                ; 4       ;
 ; LFSR:inst20|rand_lfsr[3]                ; 4       ;
 ; LFSR:inst20|rand_lfsr[4]                ; 4       ;
-; LFSR:inst20|rand_lfsr[9]                ; 5       ;
-; counter:inst16|v_output[5]              ; 11      ;
-; counter:inst16|v_output[6]              ; 6       ;
-; counter:inst16|v_output[4]              ; 7       ;
-; counter:inst16|v_output[3]              ; 14      ;
+; LFSR:inst20|rand_lfsr[9]                ; 4       ;
 ; MOUSE:inst5|send_char                   ; 3       ;
 ; MOUSE:inst5|SHIFTOUT[3]                 ; 1       ;
 ; MOUSE:inst5|SHIFTOUT[5]                 ; 1       ;
 ; MOUSE:inst5|SHIFTOUT[6]                 ; 1       ;
 ; MOUSE:inst5|SHIFTOUT[7]                 ; 1       ;
 ; MOUSE:inst5|SHIFTOUT[8]                 ; 1       ;
-; Total number of inverted registers = 16 ;         ;
+; Total number of inverted registers = 12 ;         ;
 +-----------------------------------------+---------+
 
 
@@ -477,16 +474,14 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------+
-; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |305game|MOUSE:inst5|new_cursor_column[9] ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |305game|VGA_SYNC:inst1|v_count[2]        ;
-; 3:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |305game|ball:inst|Ball_Y_pos[9]          ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |305game|ball:inst|score_count[20]        ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |305game|ball:inst|Ball_X_pos[1]          ;
-; 4:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; Yes        ; |305game|ball:inst|Ball_X_pos[8]          ;
-; 5:1                ; 10 bits   ; 30 LEs        ; 20 LEs               ; 10 LEs                 ; Yes        ; |305game|MOUSE:inst5|cursor_column[3]     ;
-; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |305game|Text_Drawer:inst10|font_row[1]   ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |305game|ball:inst|Ball_X_motion          ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |305game|ball:inst|Ball_Y_motion          ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |305game|MOUSE:inst5|new_cursor_column[0] ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |305game|VGA_SYNC:inst1|v_count[7]        ;
+; 3:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |305game|ball:inst|Ball_Y_pos[5]          ;
+; 3:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |305game|ball:inst|score_count[7]         ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |305game|ball:inst|Ball_X_pos[0]          ;
+; 4:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; Yes        ; |305game|ball:inst|Ball_X_pos[2]          ;
+; 5:1                ; 10 bits   ; 30 LEs        ; 20 LEs               ; 10 LEs                 ; Yes        ; |305game|MOUSE:inst5|cursor_column[9]     ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |305game|Text_Drawer:inst10|font_col[1]   ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------+
 
 
@@ -517,6 +512,16 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; addr_width     ; 12    ; Signed Integer                ;
 ; data_width     ; 1     ; Signed Integer                ;
 +----------------+-------+-------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: clk_divider:inst18 ;
++----------------+----------+-------------------------------------+
+; Parameter Name ; Value    ; Type                                ;
++----------------+----------+-------------------------------------+
+; max            ; 25000000 ; Signed Integer                      ;
++----------------+----------+-------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -591,39 +596,19 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: counter:inst16 ;
-+----------------+-------+------------------------------------+
-; Parameter Name ; Value ; Type                               ;
-+----------------+-------+------------------------------------+
-; max            ; 120   ; Signed Integer                     ;
-+----------------+-------+------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: clk_divider:inst18 ;
-+----------------+----------+-------------------------------------+
-; Parameter Name ; Value    ; Type                                ;
-+----------------+----------+-------------------------------------+
-; max            ; 25000000 ; Signed Integer                      ;
-+----------------+----------+-------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
 +-------------------------------------------------------------------------------------+
 ; Parameter Settings for Inferred Entity Instance: Text_Drawer:inst10|lpm_divide:Div0 ;
 +------------------------+----------------+-------------------------------------------+
 ; Parameter Name         ; Value          ; Type                                      ;
 +------------------------+----------------+-------------------------------------------+
-; LPM_WIDTHN             ; 32             ; Untyped                                   ;
-; LPM_WIDTHD             ; 8              ; Untyped                                   ;
-; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                                   ;
-; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                                   ;
+; LPM_WIDTHN             ; 9              ; Untyped                                   ;
+; LPM_WIDTHD             ; 7              ; Untyped                                   ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                   ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                   ;
 ; LPM_PIPELINE           ; 0              ; Untyped                                   ;
-; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                                   ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                   ;
 ; MAXIMIZE_SPEED         ; 5              ; Untyped                                   ;
-; CBXI_PARAMETER         ; lpm_divide_jvo ; Untyped                                   ;
+; CBXI_PARAMETER         ; lpm_divide_egm ; Untyped                                   ;
 ; CARRY_CHAIN            ; MANUAL         ; Untyped                                   ;
 ; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                   ;
 ; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                ;
@@ -639,14 +624,14 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------------------------+----------------+-------------------------------------------+
 ; Parameter Name         ; Value          ; Type                                      ;
 +------------------------+----------------+-------------------------------------------+
-; LPM_WIDTHN             ; 32             ; Untyped                                   ;
+; LPM_WIDTHN             ; 13             ; Untyped                                   ;
 ; LPM_WIDTHD             ; 5              ; Untyped                                   ;
 ; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                                   ;
 ; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                                   ;
 ; LPM_PIPELINE           ; 0              ; Untyped                                   ;
 ; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                                   ;
 ; MAXIMIZE_SPEED         ; 5              ; Untyped                                   ;
-; CBXI_PARAMETER         ; lpm_divide_gvo ; Untyped                                   ;
+; CBXI_PARAMETER         ; lpm_divide_fvo ; Untyped                                   ;
 ; CARRY_CHAIN            ; MANUAL         ; Untyped                                   ;
 ; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                   ;
 ; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                ;
@@ -662,14 +647,14 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------------------------+----------------+-------------------------------------------+
 ; Parameter Name         ; Value          ; Type                                      ;
 +------------------------+----------------+-------------------------------------------+
-; LPM_WIDTHN             ; 32             ; Untyped                                   ;
-; LPM_WIDTHD             ; 5              ; Untyped                                   ;
-; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                                   ;
-; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                                   ;
+; LPM_WIDTHN             ; 9              ; Untyped                                   ;
+; LPM_WIDTHD             ; 4              ; Untyped                                   ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                   ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                   ;
 ; LPM_PIPELINE           ; 0              ; Untyped                                   ;
-; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                                   ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                   ;
 ; MAXIMIZE_SPEED         ; 5              ; Untyped                                   ;
-; CBXI_PARAMETER         ; lpm_divide_gvo ; Untyped                                   ;
+; CBXI_PARAMETER         ; lpm_divide_bgm ; Untyped                                   ;
 ; CARRY_CHAIN            ; MANUAL         ; Untyped                                   ;
 ; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                   ;
 ; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                ;
@@ -685,14 +670,14 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------------------------+----------------+-------------------------------------------+
 ; Parameter Name         ; Value          ; Type                                      ;
 +------------------------+----------------+-------------------------------------------+
-; LPM_WIDTHN             ; 32             ; Untyped                                   ;
-; LPM_WIDTHD             ; 8              ; Untyped                                   ;
-; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                                   ;
-; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                                   ;
+; LPM_WIDTHN             ; 7              ; Untyped                                   ;
+; LPM_WIDTHD             ; 7              ; Untyped                                   ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                   ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                   ;
 ; LPM_PIPELINE           ; 0              ; Untyped                                   ;
-; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                                   ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                   ;
 ; MAXIMIZE_SPEED         ; 5              ; Untyped                                   ;
-; CBXI_PARAMETER         ; lpm_divide_jvo ; Untyped                                   ;
+; CBXI_PARAMETER         ; lpm_divide_cgm ; Untyped                                   ;
 ; CARRY_CHAIN            ; MANUAL         ; Untyped                                   ;
 ; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                   ;
 ; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                ;
@@ -708,14 +693,14 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------------------------+----------------+-------------------------------------------+
 ; Parameter Name         ; Value          ; Type                                      ;
 +------------------------+----------------+-------------------------------------------+
-; LPM_WIDTHN             ; 32             ; Untyped                                   ;
+; LPM_WIDTHN             ; 13             ; Untyped                                   ;
 ; LPM_WIDTHD             ; 5              ; Untyped                                   ;
 ; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                                   ;
 ; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                                   ;
 ; LPM_PIPELINE           ; 0              ; Untyped                                   ;
 ; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                                   ;
 ; MAXIMIZE_SPEED         ; 5              ; Untyped                                   ;
-; CBXI_PARAMETER         ; lpm_divide_gvo ; Untyped                                   ;
+; CBXI_PARAMETER         ; lpm_divide_fvo ; Untyped                                   ;
 ; CARRY_CHAIN            ; MANUAL         ; Untyped                                   ;
 ; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                   ;
 ; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                ;
@@ -731,14 +716,14 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------------------------+----------------+-------------------------------------------+
 ; Parameter Name         ; Value          ; Type                                      ;
 +------------------------+----------------+-------------------------------------------+
-; LPM_WIDTHN             ; 32             ; Untyped                                   ;
-; LPM_WIDTHD             ; 5              ; Untyped                                   ;
-; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                                   ;
-; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                                   ;
+; LPM_WIDTHN             ; 7              ; Untyped                                   ;
+; LPM_WIDTHD             ; 4              ; Untyped                                   ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                   ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                   ;
 ; LPM_PIPELINE           ; 0              ; Untyped                                   ;
-; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                                   ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                   ;
 ; MAXIMIZE_SPEED         ; 5              ; Untyped                                   ;
-; CBXI_PARAMETER         ; lpm_divide_gvo ; Untyped                                   ;
+; CBXI_PARAMETER         ; lpm_divide_9gm ; Untyped                                   ;
 ; CARRY_CHAIN            ; MANUAL         ; Untyped                                   ;
 ; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                   ;
 ; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                ;
@@ -875,7 +860,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:09     ;
+; Top            ; 00:00:05     ;
 +----------------+--------------+
 
 
@@ -885,7 +870,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
-    Info: Processing started: Sun May 20 17:15:37 2018
+    Info: Processing started: Mon May 21 19:53:46 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off 305game -c 305game
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file lfsr.vhd
@@ -933,19 +918,36 @@ Info (12021): Found 2 design units, including 1 entities, in source file text_dr
 Info (12021): Found 2 design units, including 1 entities, in source file counter_init.vhd
     Info (12022): Found design unit 1: counter_init-behaviour
     Info (12023): Found entity 1: counter_init
+Info (12021): Found 2 design units, including 1 entities, in source file level_generator.vhd
+    Info (12022): Found design unit 1: level_generator-behaviour
+    Info (12023): Found entity 1: level_generator
 Info (12127): Elaborating entity "305game" for the top level hierarchy
+Warning (275011): Block or symbol "platform" of instance "inst8" overlaps another block or symbol
 Info (12128): Elaborating entity "VGA_SYNC" for hierarchy "VGA_SYNC:inst1"
 Info (12128): Elaborating entity "clk_divider" for hierarchy "clk_divider:inst4"
 Info (12128): Elaborating entity "Compute_RGB" for hierarchy "Compute_RGB:inst11"
 Info (12128): Elaborating entity "ball" for hierarchy "ball:inst"
-Warning (10540): VHDL Signal Declaration warning at ball.vhd(49): used explicit default value for signal "Size" because signal was never assigned a value
-Warning (10492): VHDL Process Statement warning at ball.vhd(85): signal "Ball_On_Sig" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at ball.vhd(91): signal "Ball_On_Sig" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10540): VHDL Signal Declaration warning at ball.vhd(52): used explicit default value for signal "Size" because signal was never assigned a value
+Warning (10492): VHDL Process Statement warning at ball.vhd(88): signal "Ball_On_Sig" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ball.vhd(94): signal "Ball_On_Sig" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Info (12128): Elaborating entity "State_controller" for hierarchy "State_controller:inst7"
-Warning (10631): VHDL Process Statement warning at State_controller.vhd(31): inferring latch(es) for signal or variable "NS", which holds its previous value in one or more paths through the process
-Info (10041): Inferred latch for "NS.training" at State_controller.vhd(31)
-Info (10041): Inferred latch for "NS.game" at State_controller.vhd(31)
-Info (10041): Inferred latch for "NS.menu" at State_controller.vhd(31)
+Warning (10492): VHDL Process Statement warning at State_controller.vhd(48): signal "end_game" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at State_controller.vhd(54): signal "end_game" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at State_controller.vhd(60): signal "PB0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info (12128): Elaborating entity "level_generator" for hierarchy "level_generator:inst12"
+Warning (10492): VHDL Process Statement warning at level_generator.vhd(24): signal "state" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10631): VHDL Process Statement warning at level_generator.vhd(22): inferring latch(es) for signal or variable "level", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "level[0]" at level_generator.vhd(22)
+Info (10041): Inferred latch for "level[1]" at level_generator.vhd(22)
+Info (12128): Elaborating entity "counter" for hierarchy "counter:inst16"
+Warning (10492): VHDL Process Statement warning at counter.vhd(31): signal "previous_state" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at counter.vhd(31): signal "state" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at counter.vhd(33): signal "previous_state" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at counter.vhd(33): signal "state" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at counter.vhd(35): signal "previous_state" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at counter.vhd(35): signal "state" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info (12128): Elaborating entity "counter_init" for hierarchy "counter_init:inst17"
+Info (12128): Elaborating entity "clk_divider" for hierarchy "clk_divider:inst18"
 Info (12128): Elaborating entity "MOUSE" for hierarchy "MOUSE:inst5"
 Warning (10036): Verilog HDL or VHDL warning at mouse.VHD(25): object "CHARIN" assigned a value but never read
 Warning (10492): VHDL Process Statement warning at mouse.VHD(151): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
@@ -961,8 +963,6 @@ Warning (10492): VHDL Process Statement warning at platform.vhd(44): signal "Pla
 Warning (10492): VHDL Process Statement warning at platform.vhd(45): signal "Platform_X" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10492): VHDL Process Statement warning at platform.vhd(45): signal "Platform_Width" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Info (12128): Elaborating entity "LFSR" for hierarchy "LFSR:inst20"
-Info (12128): Elaborating entity "counter_init" for hierarchy "counter_init:inst17"
-Warning (10492): VHDL Process Statement warning at counter_init.vhd(35): signal "state" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Info (12128): Elaborating entity "char_rom" for hierarchy "char_rom:inst9"
 Info (12128): Elaborating entity "altsyncram" for hierarchy "char_rom:inst9|altsyncram:altsyncram_component"
 Info (12130): Elaborated megafunction instantiation "char_rom:inst9|altsyncram:altsyncram_component"
@@ -1022,9 +1022,7 @@ Info (10041): Inferred latch for "char_adr[2]" at Text_Drawer.vhd(27)
 Info (10041): Inferred latch for "char_adr[3]" at Text_Drawer.vhd(27)
 Info (10041): Inferred latch for "char_adr[4]" at Text_Drawer.vhd(27)
 Info (10041): Inferred latch for "char_adr[5]" at Text_Drawer.vhd(27)
-Info (12128): Elaborating entity "counter" for hierarchy "counter:inst16"
-Info (12128): Elaborating entity "clk_divider" for hierarchy "clk_divider:inst18"
-Info (12128): Elaborating entity "seven_seg" for hierarchy "seven_seg:inst2"
+Info (12128): Elaborating entity "seven_seg" for hierarchy "seven_seg:inst3"
 Info (278001): Inferred 8 megafunctions from design logic
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Text_Drawer:inst10|Div0"
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Text_Drawer:inst10|Div1"
@@ -1036,40 +1034,73 @@ Info (278001): Inferred 8 megafunctions from design logic
     Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "Text_Drawer:inst10|Mult1"
 Info (12130): Elaborated megafunction instantiation "Text_Drawer:inst10|lpm_divide:Div0"
 Info (12133): Instantiated megafunction "Text_Drawer:inst10|lpm_divide:Div0" with the following parameter:
-    Info (12134): Parameter "LPM_WIDTHN" = "32"
-    Info (12134): Parameter "LPM_WIDTHD" = "8"
-    Info (12134): Parameter "LPM_NREPRESENTATION" = "SIGNED"
-    Info (12134): Parameter "LPM_DREPRESENTATION" = "SIGNED"
-    Info (12134): Parameter "LPM_HINT" = "LPM_REMAINDERPOSITIVE=FALSE"
-Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_jvo.tdf
-    Info (12023): Found entity 1: lpm_divide_jvo
-Info (12021): Found 1 design units, including 1 entities, in source file db/abs_divider_nbg.tdf
-    Info (12023): Found entity 1: abs_divider_nbg
-Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_36f.tdf
-    Info (12023): Found entity 1: alt_u_div_36f
+    Info (12134): Parameter "LPM_WIDTHN" = "9"
+    Info (12134): Parameter "LPM_WIDTHD" = "7"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_egm.tdf
+    Info (12023): Found entity 1: lpm_divide_egm
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_fkh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_fkh
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_93f.tdf
+    Info (12023): Found entity 1: alt_u_div_93f
 Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_unc.tdf
     Info (12023): Found entity 1: add_sub_unc
 Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_vnc.tdf
     Info (12023): Found entity 1: add_sub_vnc
-Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_abs_st9.tdf
-    Info (12023): Found entity 1: lpm_abs_st9
-Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_abs_9v9.tdf
-    Info (12023): Found entity 1: lpm_abs_9v9
 Info (12130): Elaborated megafunction instantiation "Text_Drawer:inst10|lpm_divide:Div1"
 Info (12133): Instantiated megafunction "Text_Drawer:inst10|lpm_divide:Div1" with the following parameter:
-    Info (12134): Parameter "LPM_WIDTHN" = "32"
+    Info (12134): Parameter "LPM_WIDTHN" = "13"
     Info (12134): Parameter "LPM_WIDTHD" = "5"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "SIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "SIGNED"
     Info (12134): Parameter "LPM_HINT" = "LPM_REMAINDERPOSITIVE=FALSE"
-Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_gvo.tdf
-    Info (12023): Found entity 1: lpm_divide_gvo
-Info (12021): Found 1 design units, including 1 entities, in source file db/abs_divider_kbg.tdf
-    Info (12023): Found entity 1: abs_divider_kbg
-Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_t5f.tdf
-    Info (12023): Found entity 1: alt_u_div_t5f
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_fvo.tdf
+    Info (12023): Found entity 1: lpm_divide_fvo
+Info (12021): Found 1 design units, including 1 entities, in source file db/abs_divider_jbg.tdf
+    Info (12023): Found entity 1: abs_divider_jbg
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_r5f.tdf
+    Info (12023): Found entity 1: alt_u_div_r5f
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_abs_pt9.tdf
     Info (12023): Found entity 1: lpm_abs_pt9
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_abs_8v9.tdf
+    Info (12023): Found entity 1: lpm_abs_8v9
+Info (12130): Elaborated megafunction instantiation "Text_Drawer:inst10|lpm_divide:Div2"
+Info (12133): Instantiated megafunction "Text_Drawer:inst10|lpm_divide:Div2" with the following parameter:
+    Info (12134): Parameter "LPM_WIDTHN" = "9"
+    Info (12134): Parameter "LPM_WIDTHD" = "4"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_bgm.tdf
+    Info (12023): Found entity 1: lpm_divide_bgm
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_ckh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_ckh
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_33f.tdf
+    Info (12023): Found entity 1: alt_u_div_33f
+Info (12130): Elaborated megafunction instantiation "Text_Drawer:inst10|lpm_divide:Div3"
+Info (12133): Instantiated megafunction "Text_Drawer:inst10|lpm_divide:Div3" with the following parameter:
+    Info (12134): Parameter "LPM_WIDTHN" = "7"
+    Info (12134): Parameter "LPM_WIDTHD" = "7"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_cgm.tdf
+    Info (12023): Found entity 1: lpm_divide_cgm
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_dkh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_dkh
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_53f.tdf
+    Info (12023): Found entity 1: alt_u_div_53f
+Info (12130): Elaborated megafunction instantiation "Text_Drawer:inst10|lpm_divide:Div5"
+Info (12133): Instantiated megafunction "Text_Drawer:inst10|lpm_divide:Div5" with the following parameter:
+    Info (12134): Parameter "LPM_WIDTHN" = "7"
+    Info (12134): Parameter "LPM_WIDTHD" = "4"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_9gm.tdf
+    Info (12023): Found entity 1: lpm_divide_9gm
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_akh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_akh
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_v2f.tdf
+    Info (12023): Found entity 1: alt_u_div_v2f
 Info (12130): Elaborated megafunction instantiation "Text_Drawer:inst10|lpm_mult:Mult0"
 Info (12133): Instantiated megafunction "Text_Drawer:inst10|lpm_mult:Mult0" with the following parameter:
     Info (12134): Parameter "LPM_WIDTHA" = "4"
@@ -1084,41 +1115,60 @@ Info (12133): Instantiated megafunction "Text_Drawer:inst10|lpm_mult:Mult0" with
 Info (12131): Elaborated megafunction instantiation "Text_Drawer:inst10|lpm_mult:Mult0|multcore:mult_core", which is child of megafunction instantiation "Text_Drawer:inst10|lpm_mult:Mult0"
 Info (12131): Elaborated megafunction instantiation "Text_Drawer:inst10|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder", which is child of megafunction instantiation "Text_Drawer:inst10|lpm_mult:Mult0"
 Info (12131): Elaborated megafunction instantiation "Text_Drawer:inst10|lpm_mult:Mult0|altshift:external_latency_ffs", which is child of megafunction instantiation "Text_Drawer:inst10|lpm_mult:Mult0"
-Info (13014): Ignored 186 buffer(s)
-    Info (13016): Ignored 186 CARRY_SUM buffer(s)
+Info (13014): Ignored 22 buffer(s)
+    Info (13016): Ignored 22 CARRY_SUM buffer(s)
 Warning (13012): Latch Text_Drawer:inst10|font_col[1] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal State_controller:inst7|CS.menu
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst1|pixel_row[6]
 Warning (13012): Latch Text_Drawer:inst10|font_col[0] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal State_controller:inst7|CS.menu
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst1|pixel_row[6]
 Warning (13012): Latch Text_Drawer:inst10|font_col[2] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal State_controller:inst7|CS.menu
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst1|pixel_row[6]
+Warning (13012): Latch level_generator:inst12|level[1] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal State_controller:inst7|CS.game
+Warning (13012): Latch level_generator:inst12|level[0] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal State_controller:inst7|CS.game
 Warning (13012): Latch Text_Drawer:inst10|font_row[0] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal State_controller:inst7|CS.menu
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst1|pixel_row[6]
 Warning (13012): Latch Text_Drawer:inst10|font_row[1] has unsafe behavior
     Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst1|pixel_row[4]
 Warning (13012): Latch Text_Drawer:inst10|font_row[2] has unsafe behavior
     Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst1|pixel_row[5]
+Warning (13012): Latch Text_Drawer:inst10|char_adr[0] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal State_controller:inst7|CS.menu
+Warning (13012): Latch Text_Drawer:inst10|char_adr[1] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal State_controller:inst7|CS.menu
+Warning (13012): Latch Text_Drawer:inst10|char_adr[2] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal State_controller:inst7|CS.menu
+Warning (13012): Latch Text_Drawer:inst10|char_adr[3] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal State_controller:inst7|CS.menu
+Warning (13012): Latch Text_Drawer:inst10|char_adr[4] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal State_controller:inst7|CS.menu
+Warning (13012): Latch Text_Drawer:inst10|char_adr[5] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal State_controller:inst7|CS.menu
 Info (13000): Registers with preset signals will power-up high
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
+Warning (13004): Presettable and clearable registers converted to equivalent circuits with latches. Registers power-up to an undefined state, and DEVCLRn places the registers in an undefined state.
+    Warning (13310): Register "counter:inst16|v_output[6]" is converted into an equivalent circuit using register "counter:inst16|v_output[6]~_emulated" and latch "counter:inst16|v_output[6]~1"
+    Warning (13310): Register "counter:inst16|v_output[5]" is converted into an equivalent circuit using register "counter:inst16|v_output[5]~_emulated" and latch "counter:inst16|v_output[6]~1"
+    Warning (13310): Register "counter:inst16|v_output[4]" is converted into an equivalent circuit using register "counter:inst16|v_output[4]~_emulated" and latch "counter:inst16|v_output[4]~7"
+    Warning (13310): Register "counter:inst16|v_output[3]" is converted into an equivalent circuit using register "counter:inst16|v_output[3]~_emulated" and latch "counter:inst16|v_output[6]~1"
+    Warning (13310): Register "counter:inst16|v_output[2]" is converted into an equivalent circuit using register "counter:inst16|v_output[2]~_emulated" and latch "counter:inst16|v_output[2]~13"
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "seg1[1]" is stuck at GND
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 31 registers lost all their fanouts during netlist optimizations.
-Info (17016): Found the following redundant logic cells in design
-    Info (17048): Logic cell "Text_Drawer:inst10|Add5~0"
-    Info (17048): Logic cell "Text_Drawer:inst10|Add0~60"
-    Info (17048): Logic cell "Text_Drawer:inst10|Add0~62"
-    Info (17048): Logic cell "Text_Drawer:inst10|Add5~62"
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 4102 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 5 input pins
-    Info (21059): Implemented 19 output pins
+Info (21057): Implemented 1257 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 6 input pins
+    Info (21059): Implemented 12 output pins
     Info (21060): Implemented 2 bidirectional pins
-    Info (21061): Implemented 4068 logic cells
+    Info (21061): Implemented 1229 logic cells
     Info (21064): Implemented 8 RAM segments
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 55 warnings
-    Info: Peak virtual memory: 530 megabytes
-    Info: Processing ended: Sun May 20 17:15:50 2018
-    Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:12
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 89 warnings
+    Info: Peak virtual memory: 517 megabytes
+    Info: Processing ended: Mon May 21 19:53:53 2018
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:07
 
 

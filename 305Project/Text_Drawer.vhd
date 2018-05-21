@@ -6,12 +6,12 @@ use  IEEE.STD_LOGIC_UNSIGNED.all;
 
 ENTITY Text_Drawer IS
 	PORT(	
-			signal time_remaining	:	in integer;
+			signal time_remaining	:	in integer range 0 to 120;
 			signal state				:	in std_logic_vector(1 downto 0);
 			signal Switch				:	in std_logic;
 			signal pixel_row			:	in	 std_logic_vector(9 downto 0);
 			signal pixel_column		:	in	 std_logic_vector(10 downto 0);
-			signal score				:	in  integer;
+			signal score				:	in  integer range 0 to 300;
 			signal char_adr			:	out std_logic_vector(5 downto 0);
 			signal font_row			:	out std_logic_vector(2 downto 0);
 			signal font_col			:	out std_logic_vector(2 downto 0)
@@ -147,7 +147,7 @@ Draw_Score_Text : process(pixel_row,pixel_column)
 					char_adr <= CONV_STD_LOGIC_VECTOR(32,6);
 			end if;
 
-		elsif (state = "01") then
+		elsif (state = "01" or state = "10") then
 			-- PRINT "SCORE"
 			if (pixel_row>=CONV_STD_LOGIC_VECTOR(0,10) AND pixel_row <= CONV_STD_LOGIC_VECTOR(15,10)) then
 				-- S
