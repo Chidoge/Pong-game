@@ -47,23 +47,16 @@ applicable agreement for further details.
 	(port
 		(pt 0 80)
 		(input)
-		(text "Ball_Color2" (rect 0 0 44 12)(font "Arial" ))
-		(text "Ball_Color2" (rect 21 75 65 87)(font "Arial" ))
+		(text "Platform_On" (rect 0 0 51 12)(font "Arial" ))
+		(text "Platform_On" (rect 21 75 72 87)(font "Arial" ))
 		(line (pt 0 80)(pt 16 80)(line_width 1))
 	)
 	(port
 		(pt 0 96)
 		(input)
-		(text "Platform_On" (rect 0 0 51 12)(font "Arial" ))
-		(text "Platform_On" (rect 21 91 72 103)(font "Arial" ))
-		(line (pt 0 96)(pt 16 96)(line_width 1))
-	)
-	(port
-		(pt 0 112)
-		(input)
 		(text "rom_mux_output" (rect 0 0 69 12)(font "Arial" ))
-		(text "rom_mux_output" (rect 21 107 90 119)(font "Arial" ))
-		(line (pt 0 112)(pt 16 112)(line_width 1))
+		(text "rom_mux_output" (rect 21 91 90 103)(font "Arial" ))
+		(line (pt 0 96)(pt 16 96)(line_width 1))
 	)
 	(port
 		(pt 224 32)

@@ -5,6 +5,7 @@ use ieee.numeric_std.all;
 entity counter is
 port (
 	Enable : in bit;
+	pause : in bit;
 	Reset : in bit;
 	state : in std_logic_vector(1 downto 0);
 	clk : in bit;
@@ -35,7 +36,7 @@ begin
 		elsif (previous_state = "00" and state = "10") then
 			v_output := 20;
 	elsif (clk'event and clk = '1') then
-		if (Enable = '1') then
+		if (Enable = '1' and pause = '0') then
 			if (v_output = 0) then
 				v_output := 0;
 			else 

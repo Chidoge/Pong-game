@@ -1,12 +1,12 @@
-Analysis & Synthesis Status : Successful - Mon May 21 19:53:53 2018
-Quartus II 64-Bit Version : 13.0.0 Build 156 04/24/2013 SJ Web Edition
+Analysis & Synthesis Status : Successful - Tue May 22 17:25:37 2018
+Quartus II 64-Bit Version : 13.0.0 Build 156 04/24/2013 SJ Full Version
 Revision Name : 305game
 Top-level Entity Name : 305game
 Family : Cyclone III
-Total logic elements : 1,217
-    Total combinational functions : 1,162
-    Dedicated logic registers : 228
-Total registers : 228
+Total logic elements : 1,594
+    Total combinational functions : 1,539
+    Dedicated logic registers : 290
+Total registers : 290
 Total pins : 20
 Total virtual pins : 0
 Total memory bits : 4,096

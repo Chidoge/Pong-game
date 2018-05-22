@@ -11,6 +11,7 @@ ENTITY platform IS
 --Generic(ADDR_WIDTH: integer := 12; DATA_WIDTH: integer := 1);
 
    PORT(
+			signal pause						: in std_logic;
 			signal mouse_cursor_column 	:	in std_logic_vector(9 downto 0);
 			signal pixel_row					:	in	std_logic_vector(9 downto 0);
 			signal pixel_column				:	in std_logic_vector(10 downto 0);
@@ -30,12 +31,23 @@ begin
 	
 	--Assign new X coordinate to the platform.
 	-- Update the position of the platform, can't move too far off the screen.
-	Platform_X <=  '0' & mouse_cursor_column when ('0' & mouse_cursor_column  <= CONV_STD_LOGIC_VECTOR(640,11) - Platform_Width) else ('0' & CONV_STD_LOGIC_VECTOR(640,10) - Platform_Width);
-	
-	Platform_X_out <= Platform_X;
+	Platform_X_out <= Platform_X when (pause = '0') else "00000000000";
 	Platform_Y_out <= CONV_STD_LOGIC_VECTOR(460,10);
 	Platform_Width_out <= CONV_STD_LOGIC_VECTOR(100,10);
 	
+process(mouse_cursor_column)
+begin
+
+if (pause = '0') then
+	if ('0' & mouse_cursor_column  <= CONV_STD_LOGIC_VECTOR(640,11) - Platform_Width) then
+		Platform_X <=  '0' & mouse_cursor_column;   
+	else
+		Platform_X <=('0' & CONV_STD_LOGIC_VECTOR(640,10) - Platform_Width);
+	end if;
+end if;
+end process;
+
+
 
 
 -- Draws platform if on screen.

@@ -192,9 +192,119 @@ Draw_Score_Text : process(pixel_row,pixel_column)
 			end if;
 			font_row <= pixel_row(3 downto 1);
 			font_col <= pixel_column(3 downto 1);
-		else --temp code. replace with training screen
-			font_row <= pixel_row(3 downto 1);
-			font_col <= pixel_column(3 downto 1);
+			
+		elsif (state = "11") then
+		
+			if (pixel_row>=CONV_STD_LOGIC_VECTOR(208,10) AND pixel_row <= CONV_STD_LOGIC_VECTOR(223,10)) then
+				-- G
+				if (pixel_column >= CONV_STD_LOGIC_VECTOR(240,10) AND pixel_column <= CONV_STD_LOGIC_VECTOR(255,10)) then
+					char_adr <= CONV_STD_LOGIC_VECTOR(7,6);
+				-- A
+				elsif (pixel_column >= CONV_STD_LOGIC_VECTOR(256,10) AND pixel_column <= CONV_STD_LOGIC_VECTOR(271,10)) then
+					char_adr <= CONV_STD_LOGIC_VECTOR(1,6);
+				-- M
+				elsif (pixel_column >= CONV_STD_LOGIC_VECTOR(272,10) AND pixel_column <= CONV_STD_LOGIC_VECTOR(287,10)) then
+					char_adr <= CONV_STD_LOGIC_VECTOR(13,6);
+				-- E
+				elsif (pixel_column >= CONV_STD_LOGIC_VECTOR(288,10) AND pixel_column <= CONV_STD_LOGIC_VECTOR(303,10)) then
+					char_adr <= CONV_STD_LOGIC_VECTOR(5,6);
+				-- (white space)
+				elsif (pixel_column >= CONV_STD_LOGIC_VECTOR(304,10) AND pixel_column <= CONV_STD_LOGIC_VECTOR(319,10)) then
+					char_adr <= CONV_STD_LOGIC_VECTOR(32,6);
+				-- O 
+				elsif (pixel_column >= CONV_STD_LOGIC_VECTOR(320,10) AND pixel_column <= CONV_STD_LOGIC_VECTOR(335,10)) then
+					char_adr <= CONV_STD_LOGIC_VECTOR(15,6);
+				-- V
+				elsif (pixel_column >= CONV_STD_LOGIC_VECTOR(336,10) AND pixel_column <= CONV_STD_LOGIC_VECTOR(351,10)) then
+					char_adr <= CONV_STD_LOGIC_VECTOR(22,6);
+				-- E
+				elsif (pixel_column >= CONV_STD_LOGIC_VECTOR(352,10) AND pixel_column <= CONV_STD_LOGIC_VECTOR(367,10)) then
+					char_adr <= CONV_STD_LOGIC_VECTOR(5,6);
+				-- R
+				elsif (pixel_column >= CONV_STD_LOGIC_VECTOR(368,10) AND pixel_column <= CONV_STD_LOGIC_VECTOR(383,10)) then
+					char_adr <= CONV_STD_LOGIC_VECTOR(18,6);
+				
+				else 
+					char_adr <= CONV_STD_LOGIC_VECTOR(32,6);
+				end if;
+				font_row <= pixel_row(3 downto 1);
+				font_col <= pixel_column(3 downto 1);
+			elsif (pixel_row >= CONV_STD_LOGIC_VECTOR(240,10) AND pixel_row <= CONV_STD_LOGIC_VECTOR(255,10)) then
+				-- P
+				if (pixel_column >= CONV_STD_LOGIC_VECTOR(128,10) AND pixel_column <= CONV_STD_LOGIC_VECTOR(143,10)) then
+					char_adr <= CONV_STD_LOGIC_VECTOR(16,6);
+				-- R
+				elsif (pixel_column >= CONV_STD_LOGIC_VECTOR(144,10) AND pixel_column <= CONV_STD_LOGIC_VECTOR(159,10)) then
+					char_adr <= CONV_STD_LOGIC_VECTOR(18,6);
+				-- E
+				elsif (pixel_column >= CONV_STD_LOGIC_VECTOR(160,10) AND pixel_column <= CONV_STD_LOGIC_VECTOR(175,10)) then
+					char_adr <= CONV_STD_LOGIC_VECTOR(5,6);
+				-- S
+				elsif (pixel_column >= CONV_STD_LOGIC_VECTOR(176,10) AND pixel_column <= CONV_STD_LOGIC_VECTOR(191,10)) then
+					char_adr <= CONV_STD_LOGIC_VECTOR(19,6);
+				-- S
+				elsif (pixel_column >= CONV_STD_LOGIC_VECTOR(192,10) AND pixel_column <= CONV_STD_LOGIC_VECTOR(207,10)) then
+					char_adr <= CONV_STD_LOGIC_VECTOR(19,6);
+				-- (whitespace) 
+				elsif (pixel_column >= CONV_STD_LOGIC_VECTOR(208,10) AND pixel_column <= CONV_STD_LOGIC_VECTOR(223,10)) then
+					char_adr <= CONV_STD_LOGIC_VECTOR(32,6);
+				-- P
+				elsif (pixel_column >= CONV_STD_LOGIC_VECTOR(224,10) AND pixel_column <= CONV_STD_LOGIC_VECTOR(239,10)) then
+					char_adr <= CONV_STD_LOGIC_VECTOR(16,6);
+				-- B
+				elsif (pixel_column >= CONV_STD_LOGIC_VECTOR(240,10) AND pixel_column <= CONV_STD_LOGIC_VECTOR(255,10)) then
+					char_adr <= CONV_STD_LOGIC_VECTOR(2,6);
+				-- 0
+				elsif (pixel_column >= CONV_STD_LOGIC_VECTOR(256,10) AND pixel_column <= CONV_STD_LOGIC_VECTOR(271,10)) then
+					char_adr <= CONV_STD_LOGIC_VECTOR(48,6);
+				-- (whitespace)
+				elsif (pixel_column >= CONV_STD_LOGIC_VECTOR(272,10) AND pixel_column <= CONV_STD_LOGIC_VECTOR(287,10)) then
+					char_adr <= CONV_STD_LOGIC_VECTOR(32,6);	
+				-- T
+				elsif (pixel_column >= CONV_STD_LOGIC_VECTOR(288,10) AND pixel_column <= CONV_STD_LOGIC_VECTOR(303,10)) then
+					char_adr <= CONV_STD_LOGIC_VECTOR(20,6);	
+				-- 0
+				elsif (pixel_column >= CONV_STD_LOGIC_VECTOR(304,10) AND pixel_column <= CONV_STD_LOGIC_VECTOR(319,10)) then
+					char_adr <= CONV_STD_LOGIC_VECTOR(15,6);	
+				-- (WHITESPACE
+				elsif (pixel_column >= CONV_STD_LOGIC_VECTOR(320,10) AND pixel_column <= CONV_STD_LOGIC_VECTOR(335,10)) then
+					char_adr <= CONV_STD_LOGIC_VECTOR(32,6);	
+				-- G
+				elsif (pixel_column >= CONV_STD_LOGIC_VECTOR(336,10) AND pixel_column <= CONV_STD_LOGIC_VECTOR(351,10)) then
+					char_adr <= CONV_STD_LOGIC_VECTOR(7,6);	
+				-- O
+				elsif (pixel_column >= CONV_STD_LOGIC_VECTOR(352,10) AND pixel_column <= CONV_STD_LOGIC_VECTOR(367,10)) then
+					char_adr <= CONV_STD_LOGIC_VECTOR(15,6);
+				-- (WHITESPACE)
+				elsif (pixel_column >= CONV_STD_LOGIC_VECTOR(368,10) AND pixel_column <= CONV_STD_LOGIC_VECTOR(383,10)) then
+					char_adr <= CONV_STD_LOGIC_VECTOR(32,6);		
+				-- T
+				elsif (pixel_column >= CONV_STD_LOGIC_VECTOR(384,10) AND pixel_column <= CONV_STD_LOGIC_VECTOR(399,10)) then
+					char_adr <= CONV_STD_LOGIC_VECTOR(20,6);
+				-- 0
+				elsif (pixel_column >= CONV_STD_LOGIC_VECTOR(400,10) AND pixel_column <= CONV_STD_LOGIC_VECTOR(415,10)) then
+					char_adr <= CONV_STD_LOGIC_VECTOR(15,6);
+				-- (WHITESPACE)
+				elsif (pixel_column >= CONV_STD_LOGIC_VECTOR(416,10) AND pixel_column <= CONV_STD_LOGIC_VECTOR(431,10)) then
+					char_adr <= CONV_STD_LOGIC_VECTOR(32,6);
+				-- M
+				elsif (pixel_column >= CONV_STD_LOGIC_VECTOR(432,10) AND pixel_column <= CONV_STD_LOGIC_VECTOR(447,10)) then
+					char_adr <= CONV_STD_LOGIC_VECTOR(13,6);
+				-- E
+				elsif (pixel_column >= CONV_STD_LOGIC_VECTOR(448,10) AND pixel_column <= CONV_STD_LOGIC_VECTOR(463,10)) then
+					char_adr <= CONV_STD_LOGIC_VECTOR(5,6);
+				-- N
+				elsif (pixel_column >= CONV_STD_LOGIC_VECTOR(464,10) AND pixel_column <= CONV_STD_LOGIC_VECTOR(479,10)) then
+					char_adr <= CONV_STD_LOGIC_VECTOR(14,6);
+				-- U
+				elsif (pixel_column >= CONV_STD_LOGIC_VECTOR(480,10) AND pixel_column <= CONV_STD_LOGIC_VECTOR(495,10)) then
+					char_adr <= CONV_STD_LOGIC_VECTOR(21,6);
+				else
+					char_adr <= CONV_STD_LOGIC_VECTOR(32,6);
+				end if;
+				font_row <= pixel_row(3 downto 1);
+				font_col <= pixel_column(3 downto 1);
+			end if;
 		end if;
 end process Draw_Score_Text;
 
